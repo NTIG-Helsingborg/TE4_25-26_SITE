@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces — magenta-tinted near-black, never #000 */
+  --color-bg: oklch(0.075 0.008 320);
+  --color-bg-2: oklch(0.13 0.012 320);
+  --color-bg-3: oklch(0.18 0.014 320);
+  --color-border: oklch(0.24 0.018 320);
+  --color-border-2: oklch(0.34 0.022 320);
+
+  /* Foreground — magenta-tinted off-white, never #fff */
+  --color-fg: oklch(0.985 0.004 320);
+  --color-fg-2: oklch(0.88 0.008 320);
+  --color-muted: oklch(0.66 0.018 320);
+  --color-muted-2: oklch(0.48 0.020 320);
+
+  /* NTI hot pink — single saturated accent */
+  --color-accent: oklch(0.66 0.265 358);
+  --color-accent-soft: oklch(0.78 0.18 358);
+  --color-accent-deep: oklch(0.50 0.24 358);
+
+  /* Atmospheric purple (glow only, never UI) */
+  --color-purple-glow: oklch(0.40 0.22 320);
+  --color-purple-deep: oklch(0.22 0.16 320);
+
+  /* Type */
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', monospace;
+  --font-serif: 'Fraunces', ui-serif, Georgia, serif;
+
+  /* Motion (Jakub lens — production polish) */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  :root { color-scheme: dark; }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 1100px 750px at 88% -8%, color-mix(in oklch, var(--color-accent) 22%, transparent) 0%, transparent 60%),
+      radial-gradient(ellipse 1200px 800px at -4% 108%, color-mix(in oklch, var(--color-purple-glow) 38%, transparent) 0%, transparent 60%),
+      radial-gradient(ellipse 900px 600px at 50% 50%, transparent 0%, rgba(0,0,0,0.18) 100%);
+    background-attachment: fixed;
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Film grain overlay */
+.grain-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.55;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Subtle grid underlay */
+.grid-underlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, color-mix(in oklch, var(--color-fg) 2.5%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklch, var(--color-fg) 2.5%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Letterbox bars — fixed to viewport, opacity controlled by JS so they
+   only show while the hero is in view, then fade out as the user scrolls. */
+.letterbox-bar {
+  position: fixed;
+  left: 0; right: 0;
+  height: 84px;
+  background: #000;
+  z-index: 50;
+  pointer-events: none;
+  transition: opacity 200ms var(--ease-out-quart);
+}
+.letterbox-bar-top {
+  top: 0;
+  box-shadow:
+    0 8px 18px -10px rgba(0, 0, 0, 0.85),
+    0 1px 0 0 color-mix(in oklch, var(--color-accent) 9%, transparent);
+}
+.letterbox-bar-bot {
+  bottom: 0;
+  box-shadow:
+    0 -8px 18px -10px rgba(0, 0, 0, 0.85),
+    0 -1px 0 0 color-mix(in oklch, var(--color-accent) 9%, transparent);
+}
+
+/* Blinking cursor */
+@keyframes blink-cursor {
+  0%, 50% { opacity: 1; }
+  50.1%, 100% { opacity: 0; }
+}
+.blink { animation: blink-cursor 1.05s steps(2, end) infinite; }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+.bob { animation: bob 1.8s var(--ease-out-quart) infinite; }
+
+/* Diagonal stripe util */
+.diag-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 12px,
+    color-mix(in oklch, var(--color-accent) 8%, transparent) 12px,
+    color-mix(in oklch, var(--color-accent) 8%, transparent) 13px
+  );
+}
+
+/* Soft section divider — diffused glow, no hard line */
+.pink-rule {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    color-mix(in oklch, var(--color-accent) 32%, transparent) 30%,
+    color-mix(in oklch, var(--color-accent) 38%, transparent) 50%,
+    color-mix(in oklch, var(--color-accent) 32%, transparent) 70%,
+    transparent 100%
+  );
+  opacity: 0.55;
+}
+.pink-rule::after {
+  content: '';
+  position: absolute;
+  inset: -14px 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    color-mix(in oklch, var(--color-accent) 14%, transparent) 0%,
+    transparent 70%
+  );
+  filter: blur(12px);
+  pointer-events: none;
+}
+
+/* Accent slash mark used inline as breath element */
+.accent-slash {
+  display: inline-block;
+  width: 0.65em;
+  height: 0.12em;
+  background: var(--color-accent);
+  transform: skew(-18deg);
+  vertical-align: 0.32em;
+}
+
+/* Glow halo behind big type */
+.glow-halo {
+  position: relative;
+}
+.glow-halo::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    color-mix(in oklch, var(--color-accent) 20%, transparent) 0%,
+    transparent 60%
+  );
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
+}
