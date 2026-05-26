@@ -44,6 +44,7 @@ export const students: Student[] = [
     shortName: 'Eliah',
     role: { sv: 'spelutveckling', en: 'game dev' },
     stack: ['C#', 'Unity', 'Blender'],
+    photo: '/photos/portrait-07.jpg',
   },
   {
     id: 'isak-p',
@@ -51,6 +52,7 @@ export const students: Student[] = [
     shortName: 'Isak P.',
     role: { sv: 'frontend', en: 'frontend' },
     stack: ['HTML', 'CSS', 'React', 'Figma'],
+    photo: '/photos/portrait-04.jpg',
   },
   {
     id: 'jesper',
@@ -58,6 +60,7 @@ export const students: Student[] = [
     shortName: 'Jesper',
     role: { sv: 'fullstack', en: 'fullstack' },
     stack: ['JS', 'React', 'Node'],
+    photo: '/photos/portrait-05.jpg',
   },
   {
     id: 'kevin',
@@ -65,6 +68,7 @@ export const students: Student[] = [
     shortName: 'Kevin',
     role: { sv: 'AI · chatbot', en: 'AI · chatbot' },
     stack: ['HTML', 'CSS', 'Python', 'AI'],
+    photo: '/photos/portrait-01.jpg',
   },
   {
     id: 'andi',
@@ -72,6 +76,7 @@ export const students: Student[] = [
     shortName: 'Andi',
     role: { sv: 'spelutveckling', en: 'game dev' },
     stack: ['C#', 'Unity', 'GMS'],
+    photo: '/photos/portrait-09.jpg',
   },
   {
     id: 'damian',
@@ -79,6 +84,7 @@ export const students: Student[] = [
     shortName: 'Damian',
     role: { sv: 'spelutveckling', en: 'game dev' },
     stack: ['C#', 'Unity', 'GMS'],
+    photo: '/photos/portrait-02.jpg',
   },
   {
     id: 'finn',
@@ -86,6 +92,7 @@ export const students: Student[] = [
     shortName: 'Finn',
     role: { sv: 'systemutveckling', en: 'systems' },
     stack: ['Python', 'Java', 'Node'],
+    photo: '/photos/portrait-06.jpg',
   },
   {
     id: 'ibraheem',
@@ -100,6 +107,7 @@ export const students: Student[] = [
     shortName: 'Isak C.',
     role: { sv: 'frontend', en: 'frontend' },
     stack: ['HTML', 'CSS', 'React'],
+    photo: '/photos/portrait-08.jpg',
   },
   {
     id: 'viktor',
@@ -107,5 +115,6 @@ export const students: Student[] = [
     shortName: 'Viktor',
     role: { sv: 'te4 · 25/26', en: 'te4 · 25/26' },
     stack: ['TE4'],
+    photo: '/photos/portrait-10.jpg',
   },
 ]
