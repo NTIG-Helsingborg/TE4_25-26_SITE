@@ -100,7 +100,7 @@ export const strings = {
     runtime: { sv: 'Speltid', en: 'Runtime' },
     runtimeValue: { sv: '~10 månader', en: '~10 months' },
     thanks: { sv: 'Tack till', en: 'Special thanks' },
-    fin: { sv: 'SLUT', en: 'FIN' },
+    fin: { sv: 'THE END', en: 'THE END' },
   },
   ui: {
     skip: { sv: 'hoppa till innehåll', en: 'skip to content' },
