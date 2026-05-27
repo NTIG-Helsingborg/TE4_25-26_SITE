@@ -24,7 +24,7 @@ export function Quote({ text, attribution, variant = 'pull' }: Props) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-15% 0px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-[1180px] mx-auto relative overflow-hidden border border-border bg-bg-2/40 backdrop-blur-sm"
+          className="max-w-[1180px] mx-auto relative overflow-hidden bg-bg-2/40 backdrop-blur-sm"
         >
           <div
             className="absolute inset-0 opacity-30"

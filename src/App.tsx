@@ -11,6 +11,7 @@ import { Apl } from './pages/Apl'
 import { Tidslinje } from './pages/Tidslinje'
 import { Galleri } from './pages/Galleri'
 import { Om } from './pages/Om'
+import { StudentProfile } from './pages/StudentProfile'
 
 function App() {
   const location = useLocation()
@@ -40,6 +41,7 @@ function App() {
             <Route path="/tidslinje" element={<Tidslinje />} />
             <Route path="/galleri" element={<Galleri />} />
             <Route path="/om" element={<Om />} />
+            <Route path="/elev/:id" element={<StudentProfile />} />
           </Routes>
         </motion.div>
       </AnimatePresence>

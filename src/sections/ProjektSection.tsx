@@ -33,7 +33,7 @@ export function ProjektSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-5% 0px' }}
               transition={{ duration: 0.5, delay: 0.05 * i, ease: [0.16, 1, 0.3, 1] }}
-              className="group bg-bg p-8 transition-colors relative hover:bg-bg-2 scroll-mt-20 border border-border hover:border-accent/40"
+              className="group bg-bg p-8 transition-colors relative scroll-mt-20 border border-border hover:border-accent/40"
             >
               <div className="flex items-center justify-between font-mono text-[11px] text-muted-2 tracking-widest mb-7">
                 <span>[{String(i + 1).padStart(2, '0')} / {p.isOpenSlot ? 'open' : p.repo}]</span>

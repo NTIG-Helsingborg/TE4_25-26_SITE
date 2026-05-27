@@ -10,6 +10,8 @@ export interface Student {
   linkedin?: string
   isAuthor?: boolean
   photo?: string
+  projects?: string[]
+  thesis?: { sv: string; en: string }
 }
 
 /**
@@ -32,6 +34,7 @@ export const students: Student[] = [
     github: 'Mykyta-G',
     isAuthor: true,
     photo: '/photos/mykyta.jpg',
+    projects: ['roastbattles'],
   },
   {
     id: 'carl',

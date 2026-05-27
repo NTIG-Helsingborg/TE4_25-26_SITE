@@ -1,15 +1,13 @@
-import { useState, useCallback } from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
-import { students, type Student } from '../data/students'
+import { students } from '../data/students'
 import { SectionHeader } from './SectionHeader'
-import { StudentModal } from '../components/StudentModal'
 
 export function KlassenSection() {
   const { lang } = useLang()
-  const [selected, setSelected] = useState<Student | null>(null)
-  const close = useCallback(() => setSelected(null), [])
+  const navigate = useNavigate()
 
   return (
     <section className="relative">
@@ -31,7 +29,7 @@ export function KlassenSection() {
               viewport={{ once: true, margin: '-5% 0px' }}
               transition={{ duration: 0.5, delay: 0.04 * (i % 8), ease: [0.16, 1, 0.3, 1] }}
               className="group bg-bg p-7 hover:bg-bg-2 transition-colors relative border border-border hover:border-accent/40 cursor-pointer"
-              onClick={() => setSelected(s)}
+              onClick={() => navigate('/elev/' + s.id)}
             >
               <div className="relative aspect-[4/5] mb-5 overflow-hidden border border-border/70 bg-bg-2">
                 {s.photo ? (
@@ -142,7 +140,6 @@ export function KlassenSection() {
           ))}
         </ul>
       </div>
-      <StudentModal student={selected} onClose={close} />
     </section>
   )
 }

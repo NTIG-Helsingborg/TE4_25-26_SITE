@@ -11,8 +11,8 @@
   /* Foreground — magenta-tinted off-white, never #fff */
   --color-fg: oklch(0.985 0.004 320);
   --color-fg-2: oklch(0.88 0.008 320);
-  --color-muted: oklch(0.66 0.018 320);
-  --color-muted-2: oklch(0.48 0.020 320);
+  --color-muted: oklch(0.70 0.018 320);
+  --color-muted-2: oklch(0.56 0.020 320);
 
   /* NTI hot pink — single saturated accent */
   --color-accent: oklch(0.66 0.265 358);
