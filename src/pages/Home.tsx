@@ -112,7 +112,7 @@ export function Home() {
             className="mt-8 max-w-[54ch] font-mono text-[13px] leading-[1.65] text-muted"
           >
             {lang === 'sv'
-              ? 'Vi är elva, vi går fjärde tekniska året på NTI Gymnasiet Helsingborg, och under tio månader byggde vi spel, AI-agenter, dashboards och en hel del kaffe. Det här är allt vi hann med.'
+              ? 'Vi är elva elever på fjärde tekniska året på NTI Gymnasiet Helsingborg. Under tio månader byggde vi spel, AI-agenter och dashboards, med en hel del kaffe längs vägen. Det här är vad vi hann skapa.'
               : 'We are eleven. We are in our fourth technical year at NTI Gymnasiet Helsingborg. Over ten months we built games, AI agents, dashboards, and a lot of coffee. This is everything we got to.'}
           </motion.p>
 
