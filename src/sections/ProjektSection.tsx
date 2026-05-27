@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useLang } from '../contexts/LangContext'
+import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { projects } from '../data/projects'
 import { SectionHeader } from './SectionHeader'

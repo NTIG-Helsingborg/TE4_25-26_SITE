@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useLang } from '../contexts/LangContext'
+import { useLang } from '../contexts/lang'
 import { Brand } from './Brand'
 
 export function Footer() {

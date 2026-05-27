@@ -6,7 +6,7 @@ interface Props {
   variant?: 'pull' | 'film-card'
 }
 
-import { useLang } from '../contexts/LangContext'
+import { useLang } from '../contexts/lang'
 
 /**
  * Cinematic quote / pull-quote divider between sections.

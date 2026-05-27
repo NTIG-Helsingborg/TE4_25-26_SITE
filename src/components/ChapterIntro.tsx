@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useLang } from '../contexts/LangContext'
+import { useLang } from '../contexts/lang'
 
 interface Props {
   chapter: { sv: string; en: string }

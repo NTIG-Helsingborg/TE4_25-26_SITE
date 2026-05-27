@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import type { ReactNode } from 'react'
-import { useLang } from '../contexts/LangContext'
+import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { students } from '../data/students'
 import { projects } from '../data/projects'

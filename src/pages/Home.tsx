@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
-import { useLang } from '../contexts/LangContext'
+import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { students } from '../data/students'
 import { projects } from '../data/projects'

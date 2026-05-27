@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useLang } from '../contexts/LangContext'
+import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 
 const order = ['/', '/klassen', '/projekt', '/apl', '/tidslinje', '/galleri', '/om'] as const

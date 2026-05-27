@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useLang } from '../contexts/LangContext'
+import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 
 interface Chapter {

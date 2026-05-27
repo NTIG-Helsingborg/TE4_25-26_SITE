@@ -1,22 +1,13 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
-
-export type Lang = 'sv' | 'en'
-
-interface LangCtx {
-  lang: Lang
-  setLang: (l: Lang) => void
-  toggle: () => void
-}
-
-const Ctx = createContext<LangCtx | null>(null)
-
-const STORAGE_KEY = 'te4-lang'
+import { useEffect, useState, type ReactNode } from 'react'
+import { Ctx, DEFAULT_LANG, getSupportedSystemLang, STORAGE_KEY, type Lang } from './lang'
 
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => {
-    if (typeof window === 'undefined') return 'sv'
+    if (typeof window === 'undefined') return DEFAULT_LANG
     const stored = window.localStorage.getItem(STORAGE_KEY) as Lang | null
-    return stored === 'en' || stored === 'sv' ? stored : 'sv'
+    if (stored === 'en' || stored === 'sv') return stored
+
+    return getSupportedSystemLang() ?? DEFAULT_LANG
   })
 
   useEffect(() => {
@@ -28,14 +19,4 @@ export function LangProvider({ children }: { children: ReactNode }) {
   const toggle = () => setLangState(lang === 'sv' ? 'en' : 'sv')
 
   return <Ctx.Provider value={{ lang, setLang, toggle }}>{children}</Ctx.Provider>
-}
-
-export function useLang() {
-  const ctx = useContext(Ctx)
-  if (!ctx) throw new Error('useLang must be used within LangProvider')
-  return ctx
-}
-
-export function t<T extends Record<Lang, unknown>>(strings: T, lang: Lang): T[Lang] {
-  return strings[lang]
 }
