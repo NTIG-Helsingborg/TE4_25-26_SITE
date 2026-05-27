@@ -6,6 +6,7 @@ export interface Student {
   stack: string[]
   quote?: { sv: string; en: string }
   github?: string
+  linkedin?: string
   isAuthor?: boolean
   photo?: string
 }
@@ -44,6 +45,8 @@ export const students: Student[] = [
     shortName: 'Eliah',
     role: { sv: 'spelutveckling', en: 'game dev' },
     stack: ['C#', 'Unity', 'Blender'],
+    github: 'eliahdim',
+    linkedin: 'eliah-dimmed',
     photo: '/photos/portrait-07.jpg',
   },
   {
@@ -52,6 +55,8 @@ export const students: Student[] = [
     shortName: 'Isak P.',
     role: { sv: 'frontend', en: 'frontend' },
     stack: ['HTML', 'CSS', 'React', 'Figma'],
+    github: 'IsakPetersson',
+    linkedin: 'isak-petersson-801a2937a',
     photo: '/photos/portrait-04.jpg',
   },
   {

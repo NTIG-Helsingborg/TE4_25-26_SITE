@@ -87,16 +87,28 @@ export function KlassenSection() {
 
               <div className="flex items-baseline justify-between gap-3 mb-2">
                 <h3 className="font-sans font-bold text-fg text-xl tracking-tight">{s.fullName}</h3>
-                {s.github && (
-                  <a
-                    href={`https://github.com/${s.github}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors"
-                  >
-                    @{s.github}
-                  </a>
-                )}
+                <div className="flex items-baseline gap-3">
+                  {s.github && (
+                    <a
+                      href={`https://github.com/${s.github}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors"
+                    >
+                      @{s.github}
+                    </a>
+                  )}
+                  {s.linkedin && (
+                    <a
+                      href={`https://linkedin.com/in/${s.linkedin}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors"
+                    >
+                      LinkedIn
+                    </a>
+                  )}
+                </div>
               </div>
               <p className="font-mono text-[11px] text-muted tracking-wide lowercase mb-3">
                 {s.role[lang]}
