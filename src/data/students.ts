@@ -5,6 +5,7 @@ export interface Student {
   role: { sv: string; en: string }
   stack: string[]
   quote?: { sv: string; en: string }
+  bio?: { sv: string; en: string }
   github?: string
   linkedin?: string
   isAuthor?: boolean
@@ -112,6 +113,8 @@ export const students: Student[] = [
     shortName: 'Isak C.',
     role: { sv: 'frontend', en: 'frontend' },
     stack: ['HTML', 'CSS', 'React'],
+    github: 'isakcarlsson25',
+    linkedin: 'isak-carlsson-73076737a',
     photo: '/photos/portrait-08.jpg',
   },
 ]

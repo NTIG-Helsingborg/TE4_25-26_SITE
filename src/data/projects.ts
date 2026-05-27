@@ -8,6 +8,7 @@ export interface Project {
   description: { sv: string; en: string }
   stack: string[]
   primaryLanguage: string
+  deployUrl?: string
   period: string
   isOpenSlot?: boolean
 }
@@ -29,6 +30,7 @@ export const projects: Project[] = [
     },
     stack: ['react', 'vite', 'js'],
     primaryLanguage: 'JavaScript',
+    deployUrl: 'https://roastbattles.azurewebsites.net/',
     period: 'okt — dec 2025',
   },
   {

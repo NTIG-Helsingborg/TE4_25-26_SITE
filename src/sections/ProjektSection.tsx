@@ -74,6 +74,17 @@ export function ProjektSection() {
                     {strings.projekt.viewOnGithub[lang]}
                     <span className="group-hover/link:translate-x-0.5 transition-transform">→</span>
                   </a>
+                  {p.deployUrl && (
+                    <a
+                      href={p.deployUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-accent hover:text-accent-soft transition-colors flex items-center gap-1.5 group/link"
+                    >
+                      {lang === 'sv' ? 'Live demo' : 'Live demo'}
+                      <span className="group-hover/link:translate-x-0.5 transition-transform">→</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.li>
