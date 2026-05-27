@@ -11,7 +11,7 @@ export interface Student {
 }
 
 /**
- * Twelve students. Only Mykyta has a real portrait for now — everyone else
+ * Eleven students. Only Mykyta has a real portrait for now — everyone else
  * gets the initial-letter fallback and is expected to add their own.
  * (Studio portraits exist for 10 of them in /public/photos/portrait-*.jpg
  * but aren't wired in until each person confirms their mapping.)
@@ -108,13 +108,5 @@ export const students: Student[] = [
     role: { sv: 'frontend', en: 'frontend' },
     stack: ['HTML', 'CSS', 'React'],
     photo: '/photos/portrait-08.jpg',
-  },
-  {
-    id: 'viktor',
-    fullName: 'Viktor Alkbrand',
-    shortName: 'Viktor',
-    role: { sv: 'te4 · 25/26', en: 'te4 · 25/26' },
-    stack: ['TE4'],
-    photo: '/photos/portrait-10.jpg',
   },
 ]
