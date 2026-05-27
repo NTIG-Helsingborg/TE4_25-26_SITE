@@ -1,11 +1,15 @@
+import { useState, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
-import { students } from '../data/students'
+import { students, type Student } from '../data/students'
 import { SectionHeader } from './SectionHeader'
+import { StudentModal } from '../components/StudentModal'
 
 export function KlassenSection() {
   const { lang } = useLang()
+  const [selected, setSelected] = useState<Student | null>(null)
+  const close = useCallback(() => setSelected(null), [])
 
   return (
     <section className="relative">
@@ -26,7 +30,8 @@ export function KlassenSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-5% 0px' }}
               transition={{ duration: 0.5, delay: 0.04 * (i % 8), ease: [0.16, 1, 0.3, 1] }}
-              className="group bg-bg p-7 hover:bg-bg-2 transition-colors relative border border-border hover:border-accent/40"
+              className="group bg-bg p-7 hover:bg-bg-2 transition-colors relative border border-border hover:border-accent/40 cursor-pointer"
+              onClick={() => setSelected(s)}
             >
               <div className="relative aspect-[4/5] mb-5 overflow-hidden border border-border/70 bg-bg-2">
                 {s.photo ? (
@@ -87,16 +92,30 @@ export function KlassenSection() {
 
               <div className="flex items-baseline justify-between gap-3 mb-2">
                 <h3 className="font-sans font-bold text-fg text-xl tracking-tight">{s.fullName}</h3>
-                {s.github && (
-                  <a
-                    href={`https://github.com/${s.github}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors"
-                  >
-                    @{s.github}
-                  </a>
-                )}
+                <div className="flex items-baseline gap-3">
+                  {s.github && (
+                    <a
+                      href={`https://github.com/${s.github}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      @{s.github}
+                    </a>
+                  )}
+                  {s.linkedin && (
+                    <a
+                      href={`https://linkedin.com/in/${s.linkedin}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      LinkedIn
+                    </a>
+                  )}
+                </div>
               </div>
               <p className="font-mono text-[11px] text-muted tracking-wide lowercase mb-3">
                 {s.role[lang]}
@@ -123,6 +142,7 @@ export function KlassenSection() {
           ))}
         </ul>
       </div>
+      <StudentModal student={selected} onClose={close} />
     </section>
   )
 }
