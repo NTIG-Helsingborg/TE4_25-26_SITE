@@ -65,8 +65,8 @@ export const strings = {
     chapter: { sv: 'CH. 03 — APL', en: 'CH. 03 — APL' },
     title: { sv: 'Tio veckor.\nTvå länder.', en: 'Ten weeks.\nTwo countries.' },
     lede: {
-      sv: 'Sju veckor i Sverige, tre i Malta. Tio veckor av att låtsas att vi visste vad vi gjorde — och någonstans i mitten började vi göra det på riktigt.',
-      en: 'Seven weeks in Sweden, three in Malta. Ten weeks of pretending we knew what we were doing — and somewhere in the middle, we started actually doing it.',
+      sv: 'Sju veckor hemma och tre veckor utomlands - en APL-period som gav oss både erfarenhet, ansvar och nya perspektiv.',
+      en: 'Seven weeks at home, three abroad - an APL period that gave us both experience, responsibility, and new perspectives.',
     },
     sweden: { sv: 'Sverige', en: 'Sweden' },
     malta: { sv: 'Malta', en: 'Malta' },

@@ -43,8 +43,8 @@ export function AplSection() {
             photo="/photos/events/apl-malta.jpg"
             description={
               lang === 'sv'
-                ? 'Tre veckor i Malta. En annan sol, en annan kod-kultur, samma deadlines.'
-                : 'Three weeks in Malta. A different sun, a different code culture, the same deadlines.'
+                ? 'Tre veckor i Malta - samma stress, finare utsikt.'
+                : 'Three weeks in Malta - same stress, better view.'
             }
             timecode="00:51:34:06"
           />

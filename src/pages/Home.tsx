@@ -159,8 +159,8 @@ export function Home() {
 
       <Quote
         text={{
-          sv: '“’Det borde fungera’ - sista orden innan katastrof.”',
-          en: '“It should work” - the last words before disaster.',
+          sv: '’Det borde fungera’ - sista orden innan katastrof.',
+          en: '"It should work" - the last words before disaster.',
         }}
         attribution={{ sv: 'En anonym i klassen', en: 'Someone in the class' }}
       />
@@ -170,14 +170,14 @@ export function Home() {
 
       <Quote
         text={{
-          sv: '“Internationell arbetslivserfarenhet låter bättre än ‘vi satt med laptops i värmen’.”', 
+          sv: 'Internationell arbetslivserfarenhet låter bättre än ‘vi satt med laptops i värmen’.', 
           /*
           Andra quotes:
           “Vi åkte till Malta för erfarenheten. Och solen. Mest solen.”
           “Vi lärde oss att deadlines fortfarande existerar utomlands.”
           “Vi började som elever och slutade som gratis arbetskraft.”
           */
-          en: '“International work experience sounds better than ‘we sat with laptops in the heat’.”',
+          en: 'International work experience sounds better than ‘we sat with laptops in the heat’.',
         }}
         attribution={{ sv: 'APL · vår 2026', en: 'APL · spring 2026' }}
       />
