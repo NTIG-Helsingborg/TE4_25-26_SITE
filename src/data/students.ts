@@ -53,14 +53,14 @@ export const students: Student[] = [
     linkedin: 'eliah-dimmed',
     photo: '/photos/portrait-07.jpg',
     bio: {
-      sv: 'Jag har gått TE4 med inriktning inom teknik och har ett stort intresse för webbutveckling. Under min utbildning och på fritiden har jag arbetat mycket med att utveckla webbapplikationer, där frontend är det område jag tycker är mest intressant. Jag gillar att skapa användarvänliga och moderna gränssnitt och utvecklas ständigt inom nya tekniker och ramverk. På fritiden gillar jag att kolla på fotboll och träna på gym, vilket hjälper mig att hålla både fokus och motivation uppe.',
-      en: 'I completed TE4 with a focus on technology and have a strong interest in web development. During my studies and in my free time, I have worked extensively with developing web applications, where frontend development is the area I enjoy the most. I like creating user-friendly and modern interfaces, and I am constantly improving my skills by learning new technologies and frameworks. In my free time, I enjoy watching football and going to the gym, which helps me stay focused and motivated.',
+      sv: 'Jag har ett stort intresse för programmering, AI och digitala lösningar, särskilt projekt där teknik kan användas för att automatisera processer eller skapa något kreativt och användbart. Under året har jag arbetat mycket med moderna webbutvecklingsverktyg och AI-baserade lösningar, både i skolan och under min APL-period. \nPå min APL hos ZYNQ Media Group fokuserade jag bland annat på att utveckla AI-verktyg för marknadsföring och innehållsskapande. Där fick jag möjlighet att kombinera programmering med problemlösning, design och affärstänkande. Utöver utveckling är jag också intresserad av musik, digital design och kreativa projekt. Jag gillar att bygga idéer från grunden och utforska hur teknik och kreativitet kan kombineras för att skapa något unikt.',
+      en: 'I have a strong interest in programming, AI and digital solutions, especially projects where technology can be used to automate processes or create something creative and useful. During the year, I have worked extensively with modern web development tools and AI-based solutions, both in school and during my APL period. During my APL at ZYNQ Media Group, I focused on developing AI tools for marketing and content creation. There I had the opportunity to combine programming with problem-solving, design and business thinking. In addition to development, I am also interested in music, digital design and creative projects. I like to build ideas from the ground up and explore how technology and creativity can be combined to create something unique.',
     },
     quote: {
-      sv: 'Låt en man få dra den i fred',
-      en: 'Let a man draw it in peace',
+      sv: 'If it works, don\'t touch it',
+      en: 'If it works, don\'t touch it',
     },
-    projects: ['ai-overwatch'],
+    projects: ['ai-overwatch', ],
     thesis: {
       sv: '"En undersökning av hur strukturerade tekniker påverkar kvaliteten och precisionen i LLM-svar."',
       en: '"An investigation into how structured techniques affect the quality and precision of LLM responses."',
