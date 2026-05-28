@@ -47,11 +47,24 @@ export const students: Student[] = [
     id: 'eliah',
     fullName: 'Eliah Bäckström Dimmed',
     shortName: 'Eliah',
-    role: { sv: 'spelutveckling', en: 'game dev' },
-    stack: ['C#', 'Unity', 'Blender'],
+    role: { sv: 'Frontendutveckling', en: 'Frontend development' },
+    stack: ['HTML', 'CSS', 'React', 'Figma', 'JS','WordPress', 'C#'],
     github: 'eliahdim',
     linkedin: 'eliah-dimmed',
     photo: '/photos/portrait-07.jpg',
+    bio: {
+      sv: 'Jag har gått TE4 med inriktning inom teknik och har ett stort intresse för webbutveckling. Under min utbildning och på fritiden har jag arbetat mycket med att utveckla webbapplikationer, där frontend är det område jag tycker är mest intressant. Jag gillar att skapa användarvänliga och moderna gränssnitt och utvecklas ständigt inom nya tekniker och ramverk. På fritiden gillar jag att kolla på fotboll och träna på gym, vilket hjälper mig att hålla både fokus och motivation uppe.',
+      en: 'I completed TE4 with a focus on technology and have a strong interest in web development. During my studies and in my free time, I have worked extensively with developing web applications, where frontend development is the area I enjoy the most. I like creating user-friendly and modern interfaces, and I am constantly improving my skills by learning new technologies and frameworks. In my free time, I enjoy watching football and going to the gym, which helps me stay focused and motivated.',
+    },
+    quote: {
+      sv: 'Låt en man få dra den i fred',
+      en: 'Let a man draw it in peace',
+    },
+    projects: ['ai-overwatch'],
+    thesis: {
+      sv: '"En undersökning av hur strukturerade tekniker påverkar kvaliteten och precisionen i LLM-svar."',
+      en: '"An investigation into how structured techniques affect the quality and precision of LLM responses."',
+    },
   },
   {
     id: 'isak-p',
