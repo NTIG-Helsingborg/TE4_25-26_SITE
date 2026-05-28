@@ -115,9 +115,22 @@ export const students: Student[] = [
     fullName: 'Isak Carlsson',
     shortName: 'Isak C.',
     role: { sv: 'frontend', en: 'frontend' },
-    stack: ['HTML', 'CSS', 'React'],
+    stack: ['HTML', 'CSS', 'React', 'Figma', 'JS','WordPress', 'C#'],
     github: 'isakcarlsson25',
     linkedin: 'isak-carlsson-73076737a',
     photo: '/photos/portrait-08.jpg',
+    bio: {
+      sv: 'Jag har gått TE4 med inriktning inom teknik och har ett stort intresse för webbutveckling. Under min utbildning och på fritiden har jag arbetat mycket med att utveckla webbapplikationer, där frontend är det område jag tycker är mest intressant. Jag gillar att skapa användarvänliga och moderna gränssnitt och utvecklas ständigt inom nya tekniker och ramverk. På fritiden gillar jag att kolla på fotboll och träna på gym, vilket hjälper mig att hålla både fokus och motivation uppe.',
+      en: 'I completed TE4 with a focus on technology and have a strong interest in web development. During my studies and in my free time, I have worked extensively with developing web applications, where frontend development is the area I enjoy the most. I like creating user-friendly and modern interfaces, and I am constantly improving my skills by learning new technologies and frameworks. In my free time, I enjoy watching football and going to the gym, which helps me stay focused and motivated.',
+    },
+    quote: {
+      sv: 'Jag vill skapa saker som gör skillnad och är kul att använda.',
+      en: 'I want to create things that make a difference and are fun to use.',
+    },
+    projects: ['ai-overwatch'],
+    thesis: {
+      sv: '"Hur påverkas nyexaminerade utvecklare genom AI:s utveckling på arbetsmarknaden?"',
+      en: '"How are newly graduated developers affected by the development of AI in the job market?"',
+    },
   },
 ]
