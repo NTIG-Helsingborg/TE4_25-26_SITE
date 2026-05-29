@@ -45,8 +45,24 @@ export const students: Student[] = [
     id: 'carl',
     fullName: 'Carl Axelson',
     shortName: 'Carl',
-    role: { sv: 'systemutveckling', en: 'systems' },
-    stack: ['C#', 'TypeScript', 'Node'],
+    role: { sv: 'fullstack', en: 'fullstack' },
+    stack: ['HTML', 'CSS', 'JS', 'TS', 'Java', 'Luau', 'C#', 'C++', 'SQL', 'React', 'Vue', 'Laravel', 'Express'],
+    quote: {
+      sv: 'Vissa devs skriver ren kod. Jag skriver rena prompts. Ingen funktion lämnad öppen för tolkning. Sex stycken, minimum.',
+      en: 'Some devs write clean code. I write clean prompts. No feature left up for interpretation. Six paragraphs, minimum.',
+    },
+    bio: {
+      sv: 'Ska skriva mer här...',
+      en: 'Going to write more here...',
+    },
+    github: 'CarlAxelson',
+    linkedin: 'carl-axelson',
+    photo: '/photos/Carl.jpg',
+    projects: ['roastbattles'],
+    thesis: {
+      sv: 'En undersökning som utforskar hur AI-genererade videor kan avslöjas genom synliga artefakter och mjukvaruanalys, och jämför träffsäkerheten hos mänsklig bedömning mot fritt tillgängliga detektionsverktyg.',
+      en: 'An investigation that explores how AI-generated videos can be detected through visible artifacts and software analysis, comparing the accuracy of human judgment against freely available detection tools',
+    },
   },
   {
     id: 'eliah',
