@@ -71,12 +71,19 @@ export function OmSection() {
 
       <Credit label={lang === 'sv' ? 'Handledare' : 'Mentors'}>
         <ul className="space-y-2 font-sans text-fg text-base">
-          <li className="flex items-baseline justify-between gap-6 border-b border-border/50 pb-2">
-            <span className="font-semibold">NTI Gymnasiet Helsingborg</span>
-            <span className="font-mono text-[11px] text-muted-2 tracking-widest uppercase">
-              {lang === 'sv' ? 'lärarkår · te4' : 'faculty · te4'}
-            </span>
-          </li>
+          {['Josef Nobach', 'Linda Wannerö Avramidou', 'Vasilis Koupourtiadis'].map((name) => (
+            <li key={name} className="flex items-baseline justify-between gap-6 border-b border-border/50 pb-2">
+              <span className="font-semibold">{name}</span>
+              <span className="font-mono text-[11px] text-muted-2 tracking-widest uppercase">
+                {lang === 'sv' ? 'lärare · te4' : 'teacher · te4'}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </Credit>
+
+      <Credit label={lang === 'sv' ? 'Med stöd av' : 'Supported by'}>
+        <ul className="space-y-2 font-sans text-fg text-base">
           <li className="flex items-baseline justify-between gap-6 border-b border-border/50 pb-2">
             <span className="font-semibold">{lang === 'sv' ? 'APL-värdar i Sverige' : 'APL hosts in Sweden'}</span>
             <span className="font-mono text-[11px] text-muted-2 tracking-widest uppercase">
@@ -116,8 +123,8 @@ export function OmSection() {
       <Credit label={strings.om.thanks[lang]}>
         <p className="font-sans text-fg-2 text-base leading-relaxed max-w-[58ch] mb-6">
           {lang === 'sv'
-            ? 'Lärarna på NTI Gymnasiet Helsingborg, alla APL-handledare i Sverige och Malta, och föräldrarna som stod ut med oss när vi kodade till 03:00.'
-            : 'Teachers at NTI Gymnasiet Helsingborg, every APL supervisor in Sweden and Malta, and the parents who put up with us coding until 3 AM.'}
+            ? 'Lärarna på NTI Gymnasiet Helsingborg, alla APL-handledare i Sverige och Malta, och alla där hemma som hejade på oss hela vägen.'
+            : 'Teachers at NTI Gymnasiet Helsingborg, every APL supervisor in Sweden and Malta, and everyone back home who kept cheering us on.'}
         </p>
         <p className="font-sans italic text-muted text-sm leading-relaxed max-w-[58ch]">
           {lang === 'sv'

@@ -27,11 +27,16 @@ export const students: Student[] = [
     shortName: 'Mykyta',
     role: { sv: 'AI · agenter · founder', en: 'AI · agents · founder' },
     stack: ['React', 'TypeScript', 'Python', 'AI'],
+    bio: {
+      sv: 'Mykyta är grundare av Simple Schedules och klassens AI- och agentmänniska. Han bygger AI-verktyg och agentbaserade system — mjukvara som resonerar och agerar på egen hand — och gillar att äga ett projekt hela vägen, från React/TypeScript-frontend till Python- och AI-arbetet bakom. På TE4 vid NTI Gymnasiet Helsingborg jobbade han bland annat med RoastBattles, klassens API-projekt i React + Vite. När något kan automatiseras eller lämnas över till en agent är det oftast där man hittar honom.',
+      en: 'Mykyta is the founder of Simple Schedules and the AI-and-agents person in the class. He builds AI tooling and agentic systems — software that reasons and acts on its own — and likes owning a project end to end, from the React/TypeScript frontend to the Python and AI work behind it. At TE4 (NTI Gymnasiet Helsingborg) his work included RoastBattles, the class API project built with React + Vite. When something can be automated or handed off to an agent, that is usually where you will find him.',
+    },
     quote: {
       sv: 'Bygger AI som tänker. Sen är jag den som glömmer att äta lunch.',
       en: 'I build AI that thinks. Then I forget to eat lunch.',
     },
     github: 'Mykyta-G',
+    linkedin: 'mykyta-grogul',
     isAuthor: true,
     photo: '/photos/mykyta.jpg',
     projects: ['roastbattles'],

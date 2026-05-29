@@ -145,14 +145,14 @@ export const timeline: TimelineEvent[] = [
     id: 'jun-avslut',
     month: 'jun',
     date: { sv: 'juni 2026', en: 'June 2026' },
-    title: { sv: 'Avslut', en: 'Avslut' },
+    title: { sv: 'Avslut', en: 'Graduation' },
     brief: {
       sv: 'Sista skoldagen. Hatt på. Slutet.',
       en: 'Last school day. Cap on. The end.',
     },
     description: {
       sv: 'Tre år på NTI Gymnasiet Helsingborg. Avslut. Vi ses på andra sidan.',
-      en: 'Three years at NTI Gymnasiet Helsingborg. Avslut. See you on the other side.',
+      en: 'Three years at NTI Gymnasiet Helsingborg. That is a wrap. See you on the other side.',
     },
     tag: 'end',
     href: '/om',

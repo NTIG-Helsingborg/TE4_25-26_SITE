@@ -3,7 +3,6 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { students } from '../data/students'
-import { projects } from '../data/projects'
 import { Counter } from '../components/Counter'
 import { KlassenSection } from '../sections/KlassenSection'
 import { ProjektSection } from '../sections/ProjektSection'
@@ -112,8 +111,8 @@ export function Home() {
             className="mt-8 max-w-[54ch] font-mono text-[13px] leading-[1.65] text-muted"
           >
             {lang === 'sv'
-              ? 'Vi är elva elever på fjärde tekniska året på NTI Gymnasiet Helsingborg. Under tio månader byggde vi spel, AI-agenter och dashboards, med en hel del kaffe längs vägen. Det här är vad vi hann skapa.'
-              : 'We are eleven. We are in our fourth technical year at NTI Gymnasiet Helsingborg. Over ten months we built games, AI agents, dashboards, and a lot of coffee. This is everything we got to.'}
+              ? 'Vi är elva elever på fjärde tekniska året på NTI Gymnasiet Helsingborg. Under tio månader byggde vi spel, AI-agenter och dashboards — med en hel del kaffe längs vägen. Det här är vad vi skapade.'
+              : 'We are eleven students in our fourth technical year at NTI Gymnasiet Helsingborg. Over ten months we built games, AI agents, and dashboards — fuelled by a fair amount of coffee. This is what we made.'}
           </motion.p>
 
           <motion.div
@@ -124,17 +123,17 @@ export function Home() {
           >
             <Stat n={students.length} label={strings.home.stats.students[lang]} delay={0.9} />
             <Dot />
-            <Stat n={projects.filter((p) => !p.isOpenSlot).length} suffix="+" label={strings.home.stats.projects[lang]} delay={1.05} />
+            {/* Featured projects in the NTIG org + the personal repos the class
+                shipped this year (see Trello "Länk till projekt..."): ~10 total. */}
+            <Stat n={10} suffix="+" label={strings.home.stats.projects[lang]} delay={1.05} />
             <Dot />
             <Stat n={10} label={strings.home.stats.aplWeeks[lang]} delay={1.2} />
-            <Dot />
-            <Stat n={2} pad={2} label={strings.home.stats.countries[lang]} delay={1.35} />
           </motion.div>
         </div>
 
         {/* Scroll cue — small, fixed at bottom of letterbox */}
         {!reduce && (
-          <div className="absolute bottom-28 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2">
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 hidden [@media(min-height:900px)]:flex flex-col items-center gap-2">
             <span className="font-mono text-[10px] tracking-[0.3em] text-muted-2/70 uppercase">
               {lang === 'sv' ? 'scrolla' : 'scroll'}
             </span>
@@ -148,8 +147,8 @@ export function Home() {
 
       <Quote
         text={{
-          sv: 'Vi kom hit för att lära oss kod. Vi lärde oss en hel del annat också.',
-          en: 'We came here to learn code. We ended up learning a lot of other things too.',
+          sv: 'Elva personer, en uppgift i taget, och ett helt år av att lista ut hur man bygger saker tillsammans.',
+          en: 'Eleven people, one brief at a time, and a whole year of figuring out how to build things together.',
         }}
         attribution={{ sv: 'TE4_25-26 · klassen', en: 'TE4_25-26 · the class' }}
         variant="film-card"

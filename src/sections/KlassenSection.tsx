@@ -96,10 +96,11 @@ export function KlassenSection() {
                       href={`https://github.com/${s.github}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors"
+                      aria-label={`${s.fullName} på GitHub`}
+                      className="font-mono text-[11px] text-muted-2 hover:text-accent underline decoration-dotted underline-offset-2 decoration-muted-2/40 hover:decoration-accent transition-colors inline-flex items-center gap-0.5"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      @{s.github}
+                      GitHub <span aria-hidden="true">↗</span>
                     </a>
                   )}
                   {s.linkedin && (
@@ -107,10 +108,11 @@ export function KlassenSection() {
                       href={`https://linkedin.com/in/${s.linkedin}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors"
+                      aria-label={`${s.fullName} på LinkedIn`}
+                      className="font-mono text-[11px] text-muted-2 hover:text-accent underline decoration-dotted underline-offset-2 decoration-muted-2/40 hover:decoration-accent transition-colors inline-flex items-center gap-0.5"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      LinkedIn
+                      LinkedIn <span aria-hidden="true">↗</span>
                     </a>
                   )}
                 </div>
