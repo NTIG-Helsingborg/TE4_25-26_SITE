@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { students } from '../data/students'
+import { asset } from '../lib/asset'
 import { Counter } from '../components/Counter'
 import { KlassenSection } from '../sections/KlassenSection'
 import { ProjektSection } from '../sections/ProjektSection'
@@ -54,7 +55,7 @@ export function Home() {
         {/* Class photo background — gives the hero warmth and identity */}
         <div aria-hidden="true" className="absolute inset-0">
           <img
-            src="/photos/events/uppstart-aug.jpg"
+            src={asset('/photos/events/uppstart-aug.jpg')}
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
             style={{ filter: 'saturate(0.4) contrast(1.1) brightness(0.28)' }}

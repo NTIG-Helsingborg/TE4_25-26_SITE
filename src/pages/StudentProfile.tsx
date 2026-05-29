@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { useLang } from '../contexts/lang'
 import { students } from '../data/students'
 import { projects } from '../data/projects'
+import { asset } from '../lib/asset'
 
 const ease = [0.16, 1, 0.3, 1] as const
 
@@ -65,7 +66,7 @@ export function StudentProfile() {
             {student.photo ? (
               <>
                 <img
-                  src={student.photo}
+                  src={asset(student.photo)}
                   alt={student.fullName}
                   className="absolute inset-0 w-full h-full object-cover"
                   style={{ filter: 'saturate(0.92) contrast(1.02)' }}
