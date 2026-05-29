@@ -196,6 +196,24 @@ export const projects: Project[] = [
     period: '2025',
   },
   {
+    id: 'webbshop',
+    name: 'Webbshop',
+    org: 'Mykyta-G',
+    repo: 'Webbshop',
+    url: 'https://github.com/Mykyta-G/Webbshop',
+    tagline: {
+      sv: 'Webbshop med frontend och backend.',
+      en: 'A webshop with frontend and backend.',
+    },
+    description: {
+      sv: 'Webbshop-projekt i HTML, CSS och JavaScript med egen backend. Byggt som en fullständig e-handelslösning.',
+      en: 'Webshop project in HTML, CSS and JavaScript with its own backend. Built as a full e-commerce solution.',
+    },
+    stack: ['html', 'css', 'js', 'node'],
+    primaryLanguage: 'HTML',
+    period: '2025',
+  },
+  {
     id: 'open-slot',
     name: '',
     org: 'NTIG-Helsingborg',
