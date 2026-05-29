@@ -76,10 +76,19 @@ export const students: Student[] = [
     fullName: 'Isak Petersson',
     shortName: 'Isak P.',
     role: { sv: 'frontend', en: 'frontend' },
-    stack: ['HTML', 'CSS', 'React', 'Figma'],
+    stack: ['HTML', 'CSS', 'React', 'Figma', 'JS', 'C#'],
     github: 'IsakPetersson',
     linkedin: 'isak-petersson-801a2937a',
-    photo: '/photos/portrait-04.jpg',
+    photo: '/photos/IsakP_Portrait.jpg',
+    bio: {
+      sv: 'Jag går TE4 med inriktning inom teknik och har ett stort intresse för webbutveckling, framför allt frontend. Under utbildningen har jag arbetat mycket med React, JavaScript och Figma för att bygga moderna och användarvänliga gränssnitt. Jag gillar när design och kod hänger ihop och man får se en idé bli till något som faktiskt fungerar, som vårt projekt AI-Overwatch. På fritiden håller jag mig uppdaterad inom nya tekniker och ramverk, och det som driver mig mest är att lösa problem genom kod och skapa saker folk vill använda.',
+      en: 'I am studying TE4 with a focus on technology and have a strong interest in web development, especially frontend. During my studies I have worked extensively with React, JavaScript and Figma to build modern, user-friendly interfaces. I enjoy when design and code come together and an idea becomes something that actually works, like our AI-Overwatch project. In my free time I keep up with new technologies and frameworks, and what motivates me most is solving problems through code and building things people want to use.',
+    },
+    quote: {
+      sv: 'Jag vill bygga saker som ser bra ut och fungerar lika bra.',
+      en: 'I want to build things that look good and work just as well.',
+    },
+    projects: ['ai-overwatch'],
   },
   {
     id: 'jesper',
