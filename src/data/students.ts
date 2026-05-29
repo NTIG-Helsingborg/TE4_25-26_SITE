@@ -110,9 +110,21 @@ export const students: Student[] = [
     id: 'jesper',
     fullName: 'Jesper Ahlström',
     shortName: 'Jesper',
-    role: { sv: 'fullstack', en: 'fullstack' },
-    stack: ['JS', 'React', 'Node'],
+    role: { sv: 'backendutvecklare', en: 'backend developer' },
+    stack: ['React', 'TypeScript', 'Python', 'Node.js', 'C#', 'SQL', 'Docker'],
+    bio: {
+      sv: 'Jag är en backendutvecklare med erfarenhet av flera programmeringsspråk och tekniker. Jag har arbetat med React, TypeScript, Python, Node.js, C# och SQL, och tycker särskilt om att bygga stabila system, API:er och databaser som fungerar bra bakom kulisserna. I mina projekt har jag även använt Docker och PostgreSQL, vilket har gett mig en bättre förståelse för hur applikationer kan utvecklas, köras och hantera data på ett strukturerat sätt.',
+      en: 'I am a backend developer with experience in multiple programming languages and technologies. I have worked with React, TypeScript, Python, Node.js, C# and SQL, and particularly enjoy building stable systems, APIs and databases that work well behind the scenes. In my projects I have also used Docker and PostgreSQL, which has given me a better understanding of how applications can be developed, run and handle data in a structured way.',
+    },
+    quote: {
+      sv: 'Det finns en dag imorgon',
+      en: 'There is a day tomorrow',
+    },
+    github: 'KebabMumsare',
+    linkedin: 'jesper-ahlstrom',
+    isAuthor: true,
     photo: '/photos/portrait-05.jpg',
+    projects: ['steamdeam', 'ai guard', 'Aiming for disaster'],
   },
   {
     id: 'kevin',
