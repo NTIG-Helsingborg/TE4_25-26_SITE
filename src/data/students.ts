@@ -109,9 +109,20 @@ export const students: Student[] = [
     id: 'damian',
     fullName: 'Damian Dacic',
     shortName: 'Damian',
-    role: { sv: 'spelutveckling', en: 'game dev' },
-    stack: ['C#', 'Unity', 'GMS'],
+    role: { sv: 'webbutveckling', en: 'web dev' },
+    stack: ['React', 'Java', 'JS', 'HTML', 'CSS', 'Svelte', 'Vue'],
+    github: 'Ghost-With-A-Shoe',
+    linkedin: 'damian-dacic-88934537b',
     photo: '/photos/portrait-02.jpg',
+    bio: {
+      sv: 'Jag gillar att bygga grejer och lära mig nya saker — helst samtidigt. Webbutveckling är där jag trivs bäst, och jag hoppar gärna mellan ramverk som React, Svelte och Vue beroende på vad projektet behöver. På TE4 vid NTI Gymnasiet Helsingborg har jag jobbat med bland annat RoastBattles, klassens API-projekt i React + Vite, och plockat upp lite av allt på vägen — från frontend och styling till lite Java på baksidan. När jag inte kodar är jag oftast på jakt efter nästa sak att testa.',
+      en: 'I like to build things and learn new stuff — preferably at the same time. Web development is where I feel most at home, and I happily jump between frameworks like React, Svelte and Vue depending on what the project needs. At TE4 (NTI Gymnasiet Helsingborg) my work has included RoastBattles, the class API project built with React + Vite, and I have picked up a bit of everything along the way — from frontend and styling to some Java on the back. When I am not coding I am usually hunting for the next thing to try.',
+    },
+    quote: {
+      sv: "If it ain't broke don't fix it",
+      en: "If it ain't broke don't fix it",
+    },
+    projects: ['roastbattles'],
   },
   {
     id: 'finn',
