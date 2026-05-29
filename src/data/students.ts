@@ -111,8 +111,23 @@ export const students: Student[] = [
     fullName: 'Andi Gjomakaj',
     shortName: 'Andi',
     role: { sv: 'spelutveckling', en: 'game dev' },
-    stack: ['C#', 'Unity', 'GMS'],
+    stack: ['C#', 'Unity', 'TypeScript','JS'],
+    github: 'AndiGj',
+    linkedin: 'andi-gjomakaj-75b66337b',
     photo: '/photos/portrait-09.jpg',
+    bio: {
+      sv: 'Jag har ett stort intresse för spelutveckling och backend till hemsidor och program. Under min tid på TE4 har jag jobbat mycket med C# och Unity, där jag gillar att kombinera kreativitet och problemlösning — från spelmekanik och fysik till system som håller ihop ett helt projekt. Vid sidan av spelen har jag också utforskat webb- och backendutveckling med TypeScript och JavaScript, vilket gett mig en bredare förståelse för hur frontend, backend och logik hänger ihop. Jag tycker om att börja med en idé och se den växa fram till något färdigt, oavsett om det är ett spel, ett verktyg eller en hemsida. På fritiden gillar jag att experimentera med egna projekt, testa nya ramverk och hela tiden lära mig något nytt.',
+      en: 'I have a strong interest in game development and backend work for websites and applications. During my time at TE4, I have worked a lot with C# and Unity, where I enjoy combining creativity and problem-solving — from game mechanics and physics to the systems that tie a whole project together. Alongside games I have also explored web and backend development with TypeScript and JavaScript, which has given me a broader understanding of how frontend, backend and logic fit together. I like starting with an idea and watching it grow into something finished, whether that is a game, a tool or a website. In my free time I enjoy experimenting with my own projects, trying out new frameworks and constantly learning something new.',
+    },
+    quote: {
+      sv: 'Koden kördes rätt på första försöket? Den ljuger för dig.',
+      en: 'Did the code run correctly on the first try? It\'s lying to you.',
+    },
+    projects: ['back-to-zero'],
+    thesis:{
+      sv:'"Hur påverkas junior utvecklares lärande av AI-verktyg?"',
+      en:'"How does the learning of junior developers get affected by AI tools?"',
+    }
   },
   {
     id: 'damian',
