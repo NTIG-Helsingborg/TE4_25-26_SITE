@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { SectionHeader } from './SectionHeader'
+import { asset } from '../lib/asset'
 
 export function AplSection() {
   const { lang } = useLang()
@@ -75,7 +76,7 @@ function Country({ code, name, weeks, weeksLabel, tag, gradient, description, ti
       <div className="relative aspect-[21/9] overflow-hidden border-b border-border" style={{ background: gradient }}>
         {photo && (
           <img
-            src={photo}
+            src={asset(photo)}
             alt={name}
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"

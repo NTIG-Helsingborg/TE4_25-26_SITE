@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { SectionHeader } from './SectionHeader'
+import { asset } from '../lib/asset'
 
 interface Slot {
   id: string
@@ -90,7 +91,7 @@ export function GalleriSection() {
               className={`relative overflow-hidden border border-border bg-bg-2 group cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${s.span}`}
             >
               <img
-                src={s.src}
+                src={asset(s.src)}
                 alt={s.caption[lang]}
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.04]"
@@ -173,7 +174,7 @@ export function GalleriSection() {
               className="relative flex flex-col items-center max-w-[92vw] max-h-[88vh]"
             >
               <img
-                src={activeSlot.src}
+                src={asset(activeSlot.src)}
                 alt={activeSlot.caption[lang]}
                 className="max-w-[92vw] max-h-[80vh] object-contain border border-border"
               />

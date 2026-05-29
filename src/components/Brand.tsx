@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { asset } from '../lib/asset'
 
 interface Props {
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'hero'
@@ -41,7 +42,7 @@ export function Brand({ size = 'md', linkToHome = true, className = '' }: Props)
         <span className="text-accent">4</span>
       </span>
       <img
-        src="/nti-logo.svg"
+        src={asset('/nti-logo.svg')}
         alt="NTI Gymnasiet"
         width={250}
         height={59}

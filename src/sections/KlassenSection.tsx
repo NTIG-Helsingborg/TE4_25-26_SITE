@@ -4,6 +4,7 @@ import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { students } from '../data/students'
 import { SectionHeader } from './SectionHeader'
+import { asset } from '../lib/asset'
 
 export function KlassenSection() {
   const { lang } = useLang()
@@ -35,7 +36,7 @@ export function KlassenSection() {
                 {s.photo ? (
                   <>
                     <img
-                      src={s.photo}
+                      src={asset(s.photo)}
                       alt={s.fullName}
                       loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.03]"
@@ -55,7 +56,7 @@ export function KlassenSection() {
                     <div
                       className="absolute inset-0"
                       style={{
-                        backgroundImage: 'url(/nti-bg.jpg)',
+                        backgroundImage: `url(${asset('/nti-bg.jpg')})`,
                         backgroundSize: 'cover',
                         backgroundPosition: `${(i * 37) % 100}% ${(i * 61) % 100}%`,
                         filter: 'saturate(0.7) brightness(0.5) hue-rotate(-8deg)',
