@@ -138,8 +138,19 @@ export const students: Student[] = [
     fullName: 'Finn Skattum',
     shortName: 'Finn',
     role: { sv: 'systemutveckling', en: 'systems' },
-    stack: ['Python', 'Java', 'Node'],
+    stack: ['React', 'Java', 'JS', 'HTML', 'CSS', 'Figma', 'Vue', 'Node'],
+    github: 'Finn-S123',
+    linkedin: 'finn-skattum-11387237b',
     photo: '/photos/portrait-06.jpg',
+    bio: {
+      sv: 'Jag går TE4 vid NTI Gymnasiet Helsingborg och gillar att ta ett projekt från idé till något som faktiskt fungerar — oavsett om det handlar om gränssnitt i React eller Vue, logik i Java, eller att skissa upp helheten i Figma först. Under utbildningen har jag bland annat varit med och byggt AI-Overwatch, där vi satte ihop ett dashboard för att hålla koll på AI-beteenden. Jag lär mig snabbast genom att göra och hoppar gärna mellan språk och ramverk beroende på vad uppgiften kräver.',
+      en: 'I am studying TE4 at NTI Gymnasiet Helsingborg and like taking a project from idea to something that actually works — whether that means interfaces in React or Vue, logic in Java, or sketching the whole thing in Figma first. During the programme I have worked on AI-Overwatch, where we built a dashboard for keeping track of AI behaviour. I learn fastest by doing and happily jump between languages and frameworks depending on what the task needs.',
+    },
+    quote: {
+      sv: 'Jag vill bygga saker som fungerar i praktiken, inte bara ser bra ut i en demo.',
+      en: 'I want to build things that work in practice, not just look good in a demo.',
+    },
+    projects: ['ai-overwatch'],
   },
   {
     id: 'ibraheem',
