@@ -55,7 +55,7 @@ export const students: Student[] = [
     linkedin: 'mykyta-grogul',
     isAuthor: true,
     photo: '/photos/mykyta.jpg',
-    projects: ['roastbattles', 'back-to-zero'],
+    projects: ['roastbattles', 'back-to-zero', 'ai-guard', 'webbshop'],
     personalProjects: [
       {
         name: 'Project-Overseer',
@@ -177,10 +177,10 @@ export const students: Student[] = [
       sv: 'Ska skriva mer här...',
       en: 'Going to write more here...',
     },
-    github: 'CarlAxelson',
     linkedin: 'carl-axelson',
     photo: '/photos/Carl.jpg',
-    projects: ['roastbattles'],
+    github: 'CarlAxelson',
+    projects: ['roastbattles', 'ai-overwatch', 'aiming-for-disaster', 'ai-guard', 'coffee-webshop'],
     thesis: {
       sv: 'En undersökning som utforskar hur AI-genererade videor kan avslöjas genom synliga artefakter och mjukvaruanalys, och jämför träffsäkerheten hos mänsklig bedömning mot fritt tillgängliga detektionsverktyg.',
       en: 'An investigation that explores how AI-generated videos can be detected through visible artifacts and software analysis, comparing the accuracy of human judgment against freely available detection tools',
@@ -191,7 +191,7 @@ export const students: Student[] = [
     fullName: 'Eliah Bäckström Dimmed',
     shortName: 'Eliah',
     role: { sv: 'Frontendutveckling', en: 'Frontend development' },
-    stack: ['HTML', 'CSS', 'React', 'Figma', 'JS','WordPress', 'C#'],
+    stack: ['HTML', 'CSS', 'React', 'Figma', 'JS', 'WordPress', 'C#'],
     github: 'eliahdim',
     linkedin: 'eliah-dimmed',
     photo: '/photos/portrait-07.jpg',
@@ -203,7 +203,7 @@ export const students: Student[] = [
       sv: 'If it works, don\'t touch it',
       en: 'If it works, don\'t touch it',
     },
-    projects: ['ai-overwatch', ],
+    projects: ['ai-overwatch', 'aiming-for-disaster', 'ai-guard', 'hypixel-skyblock-tracker', 'coffee-webshop'],
     thesis: {
       sv: '"En undersökning av hur strukturerade tekniker påverkar kvaliteten och precisionen i LLM-svar."',
       en: '"An investigation into how structured techniques affect the quality and precision of LLM responses."',
@@ -219,22 +219,38 @@ export const students: Student[] = [
     linkedin: 'isak-petersson-801a2937a',
     photo: '/photos/IsakP_Portrait.jpg',
     bio: {
-      sv: 'Jag går TE4 med inriktning inom teknik och har ett stort intresse för webbutveckling, framför allt frontend. Under utbildningen har jag arbetat mycket med React, JavaScript och Figma för att bygga moderna och användarvänliga gränssnitt. Jag gillar när design och kod hänger ihop och man får se en idé bli till något som faktiskt fungerar, som vårt projekt AI-Overwatch. På fritiden håller jag mig uppdaterad inom nya tekniker och ramverk, och det som driver mig mest är att lösa problem genom kod och skapa saker folk vill använda.',
+      sv: 'Jag har under det senaste året utvecklat ett stort intresse för webbutveckling, framför allt frontend. Under utbildningen har jag arbetat mycket med React, JavaScript och Figma för att bygga moderna och användarvänliga gränssnitt. Jag gillar när design och kod hänger ihop och man får se en idé bli till något som faktiskt fungerar, som vårt projekt AI-Overwatch. På fritiden håller jag mig uppdaterad inom nya tekniker och ramverk, och det som driver mig mest är att lösa problem genom kod och skapa saker folk vill använda.',
       en: 'I am studying TE4 with a focus on technology and have a strong interest in web development, especially frontend. During my studies I have worked extensively with React, JavaScript and Figma to build modern, user-friendly interfaces. I enjoy when design and code come together and an idea becomes something that actually works, like our AI-Overwatch project. In my free time I keep up with new technologies and frameworks, and what motivates me most is solving problems through code and building things people want to use.',
     },
     quote: {
       sv: 'Jag vill bygga saker som ser bra ut och fungerar lika bra.',
       en: 'I want to build things that look good and work just as well.',
     },
-    projects: ['ai-overwatch'],
+    projects: ['ai-overwatch', 'verdenafall', 'hypixel-skyblock-tracker', 'coffee-webshop'],
+    thesis: {
+      sv: '"Hur frontend desigen påverkar UX"',
+      en: '"How frontend design affects UX"',
+    },
   },
   {
     id: 'jesper',
     fullName: 'Jesper Ahlström',
     shortName: 'Jesper',
-    role: { sv: 'fullstack', en: 'fullstack' },
-    stack: ['JS', 'React', 'Node'],
+    role: { sv: 'backendutvecklare', en: 'backend developer' },
+    stack: ['React', 'TypeScript', 'Python', 'Node.js', 'C#', 'SQL', 'Docker'],
+    bio: {
+      sv: 'Jag är en backendutvecklare med erfarenhet av flera programmeringsspråk och tekniker. Jag har arbetat med React, TypeScript, Python, Node.js, C# och SQL, och tycker särskilt om att bygga stabila system, API:er och databaser som fungerar bra bakom kulisserna. I mina projekt har jag även använt Docker och PostgreSQL, vilket har gett mig en bättre förståelse för hur applikationer kan utvecklas, köras och hantera data på ett strukturerat sätt.',
+      en: 'I am a backend developer with experience in multiple programming languages and technologies. I have worked with React, TypeScript, Python, Node.js, C# and SQL, and particularly enjoy building stable systems, APIs and databases that work well behind the scenes. In my projects I have also used Docker and PostgreSQL, which has given me a better understanding of how applications can be developed, run and handle data in a structured way.',
+    },
+    quote: {
+      sv: 'Det finns en dag imorgon',
+      en: 'There is a day tomorrow',
+    },
+    github: 'KebabMumsare',
+    linkedin: 'jesper-ahlstrom',
+    isAuthor: true,
     photo: '/photos/portrait-05.jpg',
+    projects: ['aiming-for-disaster', 'ai-guard', 'steamdream', 'webbshop'],
   },
   {
     id: 'kevin',
@@ -242,14 +258,16 @@ export const students: Student[] = [
     shortName: 'Kevin',
     role: { sv: 'AI · chatbot', en: 'AI · chatbot' },
     stack: ['HTML', 'CSS', 'Python', 'AI'],
+    github: 'KevinHermansson',
     photo: '/photos/portrait-01.jpg',
+    projects: ['verdenafall', 'hypixel-skyblock-tracker'],
   },
   {
     id: 'andi',
     fullName: 'Andi Gjomakaj',
     shortName: 'Andi',
     role: { sv: 'spelutveckling', en: 'game dev' },
-    stack: ['C#', 'Unity', 'TypeScript','JS'],
+    stack: ['C#', 'Unity', 'TypeScript', 'JS'],
     github: 'AndiGj',
     linkedin: 'andi-gjomakaj-75b66337b',
     photo: '/photos/portrait-09.jpg',
@@ -261,11 +279,11 @@ export const students: Student[] = [
       sv: 'Koden kördes rätt på första försöket? Den ljuger för dig.',
       en: 'Did the code run correctly on the first try? It\'s lying to you.',
     },
-    projects: ['back-to-zero'],
-    thesis:{
-      sv:'"Hur påverkas junior utvecklares lärande av AI-verktyg?"',
-      en:'"How does the learning of junior developers get affected by AI tools?"',
-    }
+    thesis: {
+      sv: '"Hur påverkas junior utvecklares lärande av AI-verktyg?"',
+      en: '"How does the learning of junior developers get affected by AI tools?"',
+    },
+    projects: ['back-to-zero', 'ai-guard', 'snacky', 'hypixel-skyblock-tracker']
   },
   {
     id: 'damian',
@@ -273,8 +291,8 @@ export const students: Student[] = [
     shortName: 'Damian',
     role: { sv: 'webbutveckling', en: 'web dev' },
     stack: ['React', 'Java', 'JS', 'HTML', 'CSS', 'Svelte', 'Vue'],
-    github: 'Ghost-With-A-Shoe',
     linkedin: 'damian-dacic-88934537b',
+    github: 'Ghost-With-A-Shoe',
     photo: '/photos/portrait-02.jpg',
     bio: {
       sv: 'Jag gillar att bygga grejer och lära mig nya saker — helst samtidigt. Webbutveckling är där jag trivs bäst, och jag hoppar gärna mellan ramverk som React, Svelte och Vue beroende på vad projektet behöver. På TE4 vid NTI Gymnasiet Helsingborg har jag jobbat med bland annat RoastBattles, klassens API-projekt i React + Vite, och plockat upp lite av allt på vägen — från frontend och styling till lite Java på baksidan. När jag inte kodar är jag oftast på jakt efter nästa sak att testa.',
@@ -284,7 +302,7 @@ export const students: Student[] = [
       sv: "If it ain't broke don't fix it",
       en: "If it ain't broke don't fix it",
     },
-    projects: ['roastbattles'],
+    projects: ['roastbattles', 'ai-overwatch', 'verdenafall', 'aiming-for-disaster', 'webbshop'],
   },
   {
     id: 'finn',
@@ -294,7 +312,6 @@ export const students: Student[] = [
     stack: ['React', 'Java', 'JS', 'HTML', 'CSS', 'Figma', 'Vue', 'Node'],
     github: 'Finn-S123',
     linkedin: 'finn-skattum-11387237b',
-    photo: '/photos/portrait-06.jpg',
     bio: {
       sv: 'Jag går TE4 vid NTI Gymnasiet Helsingborg och gillar att ta ett projekt från idé till något som faktiskt fungerar — oavsett om det handlar om gränssnitt i React eller Vue, logik i Java, eller att skissa upp helheten i Figma först. Under utbildningen har jag bland annat varit med och byggt AI-Overwatch, där vi satte ihop ett dashboard för att hålla koll på AI-beteenden. Jag lär mig snabbast genom att göra och hoppar gärna mellan språk och ramverk beroende på vad uppgiften kräver.',
       en: 'I am studying TE4 at NTI Gymnasiet Helsingborg and like taking a project from idea to something that actually works — whether that means interfaces in React or Vue, logic in Java, or sketching the whole thing in Figma first. During the programme I have worked on AI-Overwatch, where we built a dashboard for keeping track of AI behaviour. I learn fastest by doing and happily jump between languages and frameworks depending on what the task needs.',
@@ -303,7 +320,8 @@ export const students: Student[] = [
       sv: 'Jag vill bygga saker som fungerar i praktiken, inte bara ser bra ut i en demo.',
       en: 'I want to build things that work in practice, not just look good in a demo.',
     },
-    projects: ['ai-overwatch'],
+    photo: '/photos/portrait-06.jpg',
+    projects: ['back-to-zero', 'ai-overwatch', 'ai-guard', 'steamdream', 'webbshop'],
   },
   {
     id: 'ibraheem',
@@ -311,13 +329,15 @@ export const students: Student[] = [
     shortName: 'Ibraheem',
     role: { sv: 'fullstack', en: 'fullstack' },
     stack: ['HTML', 'CSS', 'JS', 'PHP'],
+    github: 'Ibbske',
+    projects: ['aiming-for-disaster', 'steamdream', 'snacky'],
   },
   {
     id: 'isak-c',
     fullName: 'Isak Carlsson',
     shortName: 'Isak C.',
     role: { sv: 'frontend', en: 'frontend' },
-    stack: ['HTML', 'CSS', 'React', 'Figma', 'JS','WordPress', 'C#'],
+    stack: ['HTML', 'CSS', 'React', 'Figma', 'JS', 'WordPress', 'C#'],
     github: 'isakcarlsson25',
     linkedin: 'isak-carlsson-73076737a',
     photo: '/photos/portrait-08.jpg',
@@ -329,7 +349,7 @@ export const students: Student[] = [
       sv: 'Jag vill skapa saker som gör skillnad och är kul att använda.',
       en: 'I want to create things that make a difference and are fun to use.',
     },
-    projects: ['ai-overwatch'],
+    projects: ['ai-overwatch', 'verdenafall', 'steamdream', 'snacky'],
     thesis: {
       sv: '"Hur påverkas nyexaminerade utvecklare genom AI:s utveckling på arbetsmarknaden?"',
       en: '"How are newly graduated developers affected by the development of AI in the job market?"',

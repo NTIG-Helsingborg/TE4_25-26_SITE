@@ -24,7 +24,7 @@ export function StudentProfile() {
             {lang === 'sv' ? 'Eleven finns inte' : 'Student not found'}
           </h1>
           <Link
-            to="/klassen"
+            to="/#klassen"
             className="font-mono text-[12px] text-accent hover:text-accent-soft transition-colors"
           >
             {lang === 'sv' ? '← Tillbaka till klassen' : '← Back to the class'}
@@ -71,7 +71,7 @@ export function StudentProfile() {
       {/* Back link */}
       <div className="px-12 max-w-[960px] mx-auto pt-28 mb-12">
         <Link
-          to="/klassen"
+          to="/#klassen"
           className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors tracking-widest uppercase inline-flex items-center gap-2"
         >
           <span className="group-hover:translate-x-[-2px] transition-transform">&larr;</span>

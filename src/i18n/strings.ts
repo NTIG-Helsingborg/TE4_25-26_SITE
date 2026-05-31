@@ -60,6 +60,8 @@ export const strings = {
       en: 'Add your project to the NTIG-Helsingborg org and it appears here.',
     },
     viewOnGithub: { sv: 'visa på github', en: 'view on github' },
+    viewMore: { sv: 'visa fler', en: 'view more' },
+    viewLess: { sv: 'visa färre', en: 'view less' },
   },
   apl: {
     chapter: { sv: 'CH. 03 — APL', en: 'CH. 03 — APL' },
