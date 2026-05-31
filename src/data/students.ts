@@ -11,7 +11,23 @@ export interface Student {
   isAuthor?: boolean
   photo?: string
   projects?: string[]
+  personalProjects?: PersonalProject[]
   thesis?: { sv: string; en: string }
+}
+
+/**
+ * Personal/solo projects that live on a student's own profile only — they do
+ * NOT appear on the shared class Projects page (that's `projects` in
+ * src/data/projects.ts). Curated highlights, newest first.
+ */
+export interface PersonalProject {
+  name: string
+  url: string
+  deployUrl?: string
+  tagline: { sv: string; en: string }
+  stack: string[]
+  primaryLanguage: string
+  period: string
 }
 
 /**
@@ -25,11 +41,11 @@ export const students: Student[] = [
     id: 'mykyta',
     fullName: 'Mykyta Grogul',
     shortName: 'Mykyta',
-    role: { sv: 'AI · agenter · founder', en: 'AI · agents · founder' },
-    stack: ['React', 'TypeScript', 'Python', 'AI'],
+    role: { sv: 'grundare Simple Schedules · AI & agenter', en: 'founder of Simple Schedules · AI & agents' },
+    stack: ['React', 'TypeScript', 'Python', 'AI', 'Vue', 'Swift', 'C++', 'C#', 'Java', 'Electron'],
     bio: {
-      sv: 'Mykyta är grundare av Simple Schedules och klassens AI- och agentmänniska. Han bygger AI-verktyg och agentbaserade system — mjukvara som resonerar och agerar på egen hand — och gillar att äga ett projekt hela vägen, från React/TypeScript-frontend till Python- och AI-arbetet bakom. På TE4 vid NTI Gymnasiet Helsingborg jobbade han bland annat med RoastBattles, klassens API-projekt i React + Vite. När något kan automatiseras eller lämnas över till en agent är det oftast där man hittar honom.',
-      en: 'Mykyta is the founder of Simple Schedules and the AI-and-agents person in the class. He builds AI tooling and agentic systems — software that reasons and acts on its own — and likes owning a project end to end, from the React/TypeScript frontend to the Python and AI work behind it. At TE4 (NTI Gymnasiet Helsingborg) his work included RoastBattles, the class API project built with React + Vite. When something can be automated or handed off to an agent, that is usually where you will find him.',
+      sv: 'Mykyta är grundare av Simple Schedules och klassens AI- och agentmänniska. Han bygger AI-verktyg och agentbaserade system — mjukvara som resonerar och agerar på egen hand. Hans största projekt under året är Project-Overseer, en personlig AI-infrastruktur med fem specialiserade agenter, ett väckningsord och ett fysiskt skrivbordsgränssnitt. Vid sidan av det har han byggt allt från macOS-appar som Workspace-Buddy och Focus-Wave till CLI-verktyget One-Line och hackathon-projektet Home-E i Vue + Electron. På TE4 vid NTI Gymnasiet Helsingborg var han med i RoastBattles, klassens API-projekt i React + Vite. Han gillar att äga ett projekt hela vägen — från frontend till Python- och AI-arbetet bakom — och när något kan automatiseras eller lämnas över till en agent är det oftast där man hittar honom.',
+      en: 'Mykyta is the founder of Simple Schedules and the AI-and-agents person in the class. He builds AI tooling and agentic systems — software that reasons and acts on its own. His biggest project this year is Project-Overseer, a personal AI infrastructure with five specialized agents, a wake word and a physical desk interface. Alongside it he has built everything from macOS apps like Workspace-Buddy and Focus-Wave to the One-Line CLI tool and the Home-E hackathon project in Vue + Electron. At TE4 (NTI Gymnasiet Helsingborg) he worked on RoastBattles, the class API project built with React + Vite. He likes owning a project end to end — from the frontend to the Python and AI work behind it — and when something can be automated or handed off to an agent, that is usually where you will find him.',
     },
     quote: {
       sv: 'Bygger AI som tänker. Sen är jag den som glömmer att äta lunch.',
@@ -40,6 +56,112 @@ export const students: Student[] = [
     isAuthor: true,
     photo: '/photos/mykyta.jpg',
     projects: ['roastbattles', 'back-to-zero', 'ai-guard', 'webbshop'],
+    personalProjects: [
+      {
+        name: 'Project-Overseer',
+        url: 'https://github.com/Mykyta-G/Project-Overseer',
+        tagline: {
+          sv: '🦞 Personlig AI-infrastruktur — fem specialiserade agenter, ett väckningsord och ett fysiskt skrivbordsgränssnitt. Byggt på OpenClaw + Claude.',
+          en: '🦞 Personal AI infrastructure — five specialized agents, one wake word and a physical desk interface. Built on OpenClaw + Claude.',
+        },
+        stack: ['python', 'ai', 'agents'],
+        primaryLanguage: 'Python',
+        period: 'mar 2026',
+      },
+      {
+        name: 'Notes-To-Plan',
+        url: 'https://github.com/Mykyta-G/Notes-To-Plan',
+        tagline: {
+          sv: 'Förvandlar lösa anteckningar till en strukturerad plan med hjälp av AI.',
+          en: 'Turns loose notes into a structured, actionable plan with the help of AI.',
+        },
+        stack: ['ts', 'ai'],
+        primaryLanguage: 'TypeScript',
+        period: 'feb 2026',
+      },
+      {
+        name: 'Project-Gunnar',
+        url: 'https://github.com/Mykyta-G/Project-Gunnar',
+        tagline: {
+          sv: 'AI i menyraden som svarar tillbaka. Väckningsord, udda presets och din nya bästa/värsta skrivbordskompis.',
+          en: 'Menu-bar AI that talks back. Wake word, weird presets and your new best/worst desk buddy.',
+        },
+        stack: ['ts', 'ai', 'macos'],
+        primaryLanguage: 'TypeScript',
+        period: 'jan 2026',
+      },
+      {
+        name: 'One-Line',
+        url: 'https://github.com/Mykyta-G/One-Line',
+        tagline: {
+          sv: 'Produktionsfärdigt CLI-verktyg för att skapa, hantera och köra hela kommandosekvenser från en terminalmeny.',
+          en: 'Production-ready CLI tool to create, manage and run whole command sequences from a terminal menu.',
+        },
+        stack: ['ts', 'cli', 'node'],
+        primaryLanguage: 'TypeScript',
+        period: 'jan 2026',
+      },
+      {
+        name: 'Home-E',
+        url: 'https://github.com/Mykyta-G/Home-E',
+        tagline: {
+          sv: 'Familjehanteringsapp byggd i Vue 3 + Electron under HetchHacks 2025 — från hackathon-prototyp till iOS/Android/Web.',
+          en: 'Family-management app built with Vue 3 + Electron at HetchHacks 2025 — from hackathon prototype to iOS/Android/Web.',
+        },
+        stack: ['vue', 'electron', 'ts'],
+        primaryLanguage: 'Vue',
+        period: 'nov 2025 — jan 2026',
+      },
+      {
+        name: 'Workspace-Buddy',
+        url: 'https://github.com/Mykyta-G/Workspace-Buddy',
+        tagline: {
+          sv: 'macOS-app i menyraden för att skapa, hantera och direkt växla mellan egna arbetsytor — appar, sajter och flöden med ett klick.',
+          en: 'macOS menu-bar app to create, manage and instantly switch between custom workspaces — apps, sites and workflows in one click.',
+        },
+        stack: ['swift', 'macos'],
+        primaryLanguage: 'Swift',
+        period: 'aug — dec 2025',
+      },
+      {
+        name: 'Focus-Wave',
+        url: 'https://github.com/Mykyta-G/Focus-Wave',
+        tagline: {
+          sv: 'Minimalistisk macOS-fokusapp med ambient-ljud och en lugn våganimation för bättre koncentration.',
+          en: 'Minimalist macOS focus app with ambient sounds and a calming wave animation to boost concentration.',
+        },
+        stack: ['swift', 'macos'],
+        primaryLanguage: 'Swift',
+        period: 'aug — nov 2025',
+      },
+      {
+        name: 'Trading-Simulation-Platform',
+        url: 'https://github.com/Mykyta-G/Trading-Simulation-Platform',
+        tagline: {
+          sv: 'Java Swing-app i helskärm som simulerar realistisk aktiehandel med dynamiska grafer, marknadsvolatilitet och en interaktiv handels-dashboard.',
+          en: 'Full-screen Java Swing app simulating realistic stock trading with dynamic charts, market volatility and an interactive trading dashboard.',
+        },
+        stack: ['java', 'swing'],
+        primaryLanguage: 'Java',
+        period: 'mar — nov 2025',
+      },
+      {
+        name: 'About-me',
+        url: 'https://github.com/Mykyta-G/About-me',
+        deployUrl: 'https://mykyta-g.github.io/About-me/',
+        tagline: {
+          sv: 'En personlig "om mig"-sajt i HTML/CSS — ett av de första projekten och där det hela började.',
+          en: 'A personal "about me" site in HTML/CSS — one of the first projects, where it all started.',
+        },
+        stack: ['html', 'css', 'js'],
+        primaryLanguage: 'CSS',
+        period: 'aug 2025',
+      },
+    ],
+    thesis: {
+      sv: '"Hur kan man effektivisera schemaskapandet för gymnasiet?" — examensarbetet bakom Simple Schedules, ett webbaserat schemaverktyg som med constraint-baserad logik (Google OR-Tools CP-SAT, körd i webbläsaren via WebAssembly) genererar ett komplett gymnasieschema på 10–30 sekunder utan dubbelbokningar — istället för veckor av manuellt pusslande. Bygger på en student-first-modell där eleven är den minsta schemaläggningsenheten.',
+      en: '"How can timetable creation for upper secondary schools be made more efficient?" — the thesis behind Simple Schedules, a web-based scheduling tool that uses constraint-based logic (Google OR-Tools CP-SAT, run in the browser via WebAssembly) to generate a complete upper-secondary timetable in 10–30 seconds with no double-bookings — instead of weeks of manual puzzling. Built on a student-first model where the individual student is the smallest scheduling unit.',
+    },
   },
   {
     id: 'carl',

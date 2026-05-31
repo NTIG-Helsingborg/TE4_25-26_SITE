@@ -34,9 +34,35 @@ export function StudentProfile() {
     )
   }
 
-  const studentProjects = (student.projects ?? [])
+  // One unified project list: NTI-org group projects (from projects.ts, by id)
+  // first, then the student's personal/solo repos. Rendered under a single
+  // "Projects" heading with one consistent card style.
+  const orgProjects = (student.projects ?? [])
     .map((pid) => projects.find((p) => p.id === pid))
-    .filter(Boolean)
+    .filter((p): p is NonNullable<typeof p> => Boolean(p))
+    .map((p) => ({
+      key: p.id,
+      name: p.name,
+      url: p.url,
+      deployUrl: p.deployUrl,
+      tagline: p.tagline,
+      meta: `@${p.org.toLowerCase()}`,
+      stack: p.stack,
+      period: p.period,
+    }))
+
+  const personalProjects = (student.personalProjects ?? []).map((p) => ({
+    key: p.name,
+    name: p.name,
+    url: p.url,
+    deployUrl: p.deployUrl,
+    tagline: p.tagline,
+    meta: p.primaryLanguage,
+    stack: p.stack,
+    period: p.period,
+  }))
+
+  const allProjects = [...orgProjects, ...personalProjects]
 
   const idx = students.findIndex((s) => s.id === id)
 
@@ -184,8 +210,8 @@ export function StudentProfile() {
         </ul>
       </motion.section>
 
-      {/* Projects */}
-      {studentProjects.length > 0 && (
+      {/* Projects — NTI-org group projects + personal/solo repos, one list */}
+      {allProjects.length > 0 && (
         <motion.section
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -197,62 +223,56 @@ export function StudentProfile() {
             <span>{lang === 'sv' ? 'Projekt' : 'Projects'}</span>
             <span className="flex-1 h-px bg-border" />
           </div>
-          <ul className="grid grid-cols-1 gap-4">
-            {studentProjects.map((p) => {
-              if (!p) return null
-              return (
-                <li
-                  key={p.id}
-                  className="bg-bg p-7 border border-border hover:border-accent/40 transition-colors"
-                >
-                  <div className="flex items-center justify-between font-mono text-[10px] text-muted-2 tracking-widest mb-4">
-                    <span>@{p.org.toLowerCase()}</span>
-                    <span>{p.period}</span>
-                  </div>
-                  <h3 className="font-sans font-bold text-fg text-2xl tracking-tight mb-2">
-                    {p.name}
-                  </h3>
-                  <p className="font-sans text-fg-2 text-sm leading-relaxed max-w-[50ch] mb-4">
-                    {p.tagline[lang]}
-                  </p>
-                  <p className="font-mono text-[12px] text-muted leading-relaxed max-w-[55ch] mb-5">
-                    {p.description[lang]}
-                  </p>
-                  <div className="flex items-center justify-between flex-wrap gap-4">
-                    <ul className="flex gap-1.5 flex-wrap">
-                      {p.stack.map((s, si) => (
-                        <li
-                          key={`${p.id}-${si}`}
-                          className="font-mono text-[10px] tracking-wider px-2 py-1 border border-accent/50 text-accent"
-                        >
-                          {s}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="flex items-center gap-4 font-mono text-[11px] text-muted-2">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {allProjects.map((p) => (
+              <li
+                key={p.key}
+                className="bg-bg p-6 border border-border hover:border-accent/40 transition-colors flex flex-col"
+              >
+                <div className="flex items-center justify-between font-mono text-[10px] text-muted-2 tracking-widest mb-3">
+                  <span>{p.meta}</span>
+                  <span>{p.period}</span>
+                </div>
+                <h3 className="font-sans font-bold text-fg text-xl tracking-tight mb-2">
+                  {p.name}
+                </h3>
+                <p className="font-mono text-[12px] text-muted leading-relaxed mb-5 flex-1">
+                  {p.tagline[lang]}
+                </p>
+                <div className="flex items-center justify-between flex-wrap gap-3">
+                  <ul className="flex gap-1.5 flex-wrap">
+                    {p.stack.map((s, si) => (
+                      <li
+                        key={`${p.key}-${si}`}
+                        className="font-mono text-[10px] tracking-wider px-2 py-1 border border-accent/50 text-accent"
+                      >
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center gap-4 font-mono text-[11px] text-muted-2">
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-accent hover:text-accent-soft transition-colors flex items-center gap-1.5"
+                    >
+                      GitHub <span>&rarr;</span>
+                    </a>
+                    {p.deployUrl && (
                       <a
-                        href={p.url}
+                        href={p.deployUrl}
                         target="_blank"
                         rel="noreferrer"
                         className="text-accent hover:text-accent-soft transition-colors flex items-center gap-1.5"
                       >
-                        GitHub <span>&rarr;</span>
+                        Live demo <span>&rarr;</span>
                       </a>
-                      {p.deployUrl && (
-                        <a
-                          href={p.deployUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-accent hover:text-accent-soft transition-colors flex items-center gap-1.5"
-                        >
-                          Live demo <span>&rarr;</span>
-                        </a>
-                      )}
-                    </div>
+                    )}
                   </div>
-                </li>
-              )
-            })}
+                </div>
+              </li>
+            ))}
           </ul>
         </motion.section>
       )}
@@ -278,31 +298,6 @@ export function StudentProfile() {
         </motion.section>
       )}
 
-      {/* Editable note */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.4, ease }}
-        className="px-12 max-w-[960px] mx-auto mt-20"
-      >
-        <div className="border border-dashed border-border/60 p-5">
-          <p className="font-mono text-[11px] text-muted-2/70 tracking-wide leading-relaxed">
-            {lang === 'sv' ? (
-              <>
-                Den h&auml;r sidan &auml;r redigerbar &mdash; uppdatera din post i{' '}
-                <code className="text-accent/80 bg-bg-2 px-1 py-0.5">src/data/students.ts</code>{' '}
-                f&ouml;r att l&auml;gga till bio, foto, projekt och examensarbete.
-              </>
-            ) : (
-              <>
-                This page is editable &mdash; update your entry in{' '}
-                <code className="text-accent/80 bg-bg-2 px-1 py-0.5">src/data/students.ts</code>{' '}
-                to add your bio, photo, projects, and thesis.
-              </>
-            )}
-          </p>
-        </div>
-      </motion.div>
     </main>
   )
 }
