@@ -130,12 +130,12 @@ export const projects: Project[] = [
     repo: 'SteamDream',
     url: 'https://github.com/KebabMumsare/SteamDream',
     tagline: {
-      sv: 'Spel med egen musik av Steamdream och Josef.',
-      en: 'A game with original music by Steamdream and Josef.',
+      sv: 'Visar alla steams spel på rea.',
+      en: 'Shows all Steam games on sale.',
     },
     description: {
-      sv: 'Spelprojekt i TypeScript med originalmusik skapad av Steamdream och Josef.',
-      en: 'Game project in TypeScript with original music created by Steamdream and Josef.',
+      sv: 'API projekt för att hämta och visa Steam-spel på rea.',
+      en: 'API project to fetch and display Steam games on sale.',
     },
     stack: ['ts', 'game', 'music'],
     primaryLanguage: 'TypeScript',
