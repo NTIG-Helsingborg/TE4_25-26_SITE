@@ -170,14 +170,14 @@ export function Home() {
 
       <Quote
         text={{
-          sv: 'Internationell arbetslivserfarenhet låter bättre än ‘vi satt med laptops i värmen’.', 
+          sv: 'Praktiken i Malta gav mer än arbetslivserfarenhet – den gav ett internationellt perspektiv.’.', 
           /*
           Andra quotes:
           “Vi åkte till Malta för erfarenheten. Och solen. Mest solen.”
           “Vi lärde oss att deadlines fortfarande existerar utomlands.”
           “Vi började som elever och slutade som gratis arbetskraft.”
           */
-          en: 'International work experience sounds better than ‘we sat with laptops in the heat’.',
+          en: 'The internship in Malta provided more than work experience – it provided an international perspective.’.',
         }}
         attribution={{ sv: 'APL · vår 2026', en: 'APL · spring 2026' }}
       />
