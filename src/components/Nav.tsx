@@ -63,11 +63,11 @@ export function Nav() {
 
   return (
     <>
-      <nav className="relative z-40 flex items-center justify-between border-b border-border bg-bg/85 px-4 py-4 backdrop-blur-md md:px-12">
+      <nav className="relative z-40 flex items-center justify-between border-b border-border bg-bg/85 px-4 py-4 backdrop-blur-md min-[1000px]:px-12">
         <Brand size="md" />
 
         {/* Desktop nav links */}
-        <ul className="hidden gap-7 font-mono text-xs tracking-wide md:flex">
+        <ul className="hidden gap-7 font-mono text-xs tracking-wide min-[1000px]:flex">
           {routes.map((r) => (
             <li key={r.to}>
               <NavLink
@@ -84,13 +84,13 @@ export function Nav() {
         </ul>
 
         {/* Desktop right side */}
-        <div className="hidden items-center gap-6 font-mono text-xs text-muted-2 tracking-wide md:flex">
+        <div className="hidden items-center gap-6 font-mono text-xs text-muted-2 tracking-wide min-[1000px]:flex">
           <span>helsingborg</span>
           <LangSwitcher />
         </div>
 
         {/* Mobile right side: lang switcher + hamburger */}
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex items-center gap-4 min-[1000px]:hidden">
           <LangSwitcher className="font-mono text-xs tracking-wide" />
           <button
             onClick={() => setMobileOpen((o) => !o)}
@@ -121,7 +121,7 @@ export function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
-            className="fixed inset-0 z-39 flex flex-col items-center justify-center gap-8 bg-bg/98 backdrop-blur-lg md:hidden"
+            className="fixed inset-0 z-39 flex flex-col items-center justify-center gap-8 bg-bg/98 backdrop-blur-lg min-[1000px]:hidden"
           >
             <ul className="flex flex-col items-center gap-6 font-mono text-lg tracking-wide">
               {routes.map((r, i) => (

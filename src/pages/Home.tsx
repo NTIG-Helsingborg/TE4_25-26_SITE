@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
@@ -184,19 +183,6 @@ export function Home() {
 
       <GalleriSection />
       <OmSection />
-
-      {/* Deep links footer */}
-      <section className="px-12 pb-24 max-w-[1440px] mx-auto">
-        <div className="font-mono text-[10px] tracking-widest text-muted-2 uppercase mb-4">— deep links —</div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border border border-border text-sm">
-          <DeepLink to="/klassen" label={strings.nav.klassen[lang]} />
-          <DeepLink to="/projekt" label={strings.nav.projekt[lang]} />
-          <DeepLink to="/apl" label={strings.nav.apl[lang]} />
-          <DeepLink to="/tidslinje" label={strings.nav.tidslinje[lang]} />
-          <DeepLink to="/galleri" label={strings.nav.galleri[lang]} />
-          <DeepLink to="/om" label={strings.nav.om[lang]} />
-        </div>
-      </section>
     </main>
   )
 }
@@ -214,15 +200,4 @@ function Stat({ n, label, suffix, pad = 0, delay = 0 }: { n: number; label: stri
 
 function Dot() {
   return <span className="block w-1 h-1 rounded-full bg-accent/40 self-center" aria-hidden="true" />
-}
-
-function DeepLink({ to, label }: { to: string; label: string }) {
-  return (
-    <Link
-      to={to}
-      className="bg-bg px-4 py-3 font-mono text-[11px] uppercase tracking-widest text-muted-2 hover:bg-bg-2 hover:text-fg transition-colors"
-    >
-      {label} →
-    </Link>
-  )
 }
