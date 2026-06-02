@@ -23,7 +23,7 @@ const slots: Slot[] = [
   { id: 'robot',     src: '/photos/events/robotrally-sep.jpg',   span: '',                            date: 'SEP 2025', caption: { sv: 'robotrally', en: 'robot rally' } },
   { id: 'figma',     src: '/photos/events/figma-okt.jpg',        span: 'md:col-span-2',               date: 'OKT 2025', caption: { sv: 'figma workshop · terris', en: 'figma workshop · terris' } },
   { id: 'ergonomi',  src: '/photos/events/ergonomi-okt.jpg',     span: '',                            date: 'OKT 2025', caption: { sv: 'ergonomi', en: 'ergonomics' } },
-  { id: 'linkedin',  src: '/photos/events/linkedin-nov.jpg',     span: '',                            date: 'NOV 2025', caption: { sv: 'linkedin · workshop', en: 'linkedin · workshop' } },
+  { id: 'linkedin',  src: '/photos/events/linkedin-nov.jpg',     span: '',                            date: 'NOV 2025', caption: { sv: 'spel · utveckling', en: 'game · development' } },
   { id: 'klass-nov', src: '/photos/events/klassrum-nov.jpg',     span: 'md:col-span-2',               date: 'NOV 2025', caption: { sv: 'klassrum · novemberkväll', en: 'classroom · november evening' } },
   { id: 'spel',      src: '/photos/events/spel-dec.jpg',         span: '',                            date: 'DEC 2025', caption: { sv: 'spel · speltest', en: 'games · playtest' } },
   { id: 'techship',  src: '/photos/events/techship-dec.jpg',     span: '',                            date: 'DEC 2025', caption: { sv: 'techship demo day', en: 'techship demo day' } },

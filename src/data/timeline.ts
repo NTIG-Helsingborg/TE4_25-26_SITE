@@ -89,8 +89,8 @@ export const timeline: TimelineEvent[] = [
       en: 'The JavaScript cert.',
     },
     description: {
-      sv: 'Andra certet i raden. Klassrum till tentor till godkänd.',
-      en: 'Second cert in the run. Classroom through exams to pass.',
+      sv: 'Första certet i raden. Klassrum till tentor till godkänd.',
+      en: 'First cert in the run. Classroom through exams to pass.',
     },
     tag: 'cert',
   },
