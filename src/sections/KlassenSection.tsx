@@ -4,6 +4,7 @@ import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { students } from '../data/students'
 import { SectionHeader } from './SectionHeader'
+import { asset } from '../lib/asset'
 
 export function KlassenSection() {
   const { lang } = useLang()
@@ -35,7 +36,7 @@ export function KlassenSection() {
                 {s.photo ? (
                   <>
                     <img
-                      src={s.photo}
+                      src={asset(s.photo)}
                       alt={s.fullName}
                       loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.03]"
@@ -55,7 +56,7 @@ export function KlassenSection() {
                     <div
                       className="absolute inset-0"
                       style={{
-                        backgroundImage: 'url(/nti-bg.jpg)',
+                        backgroundImage: `url(${asset('/nti-bg.jpg')})`,
                         backgroundSize: 'cover',
                         backgroundPosition: `${(i * 37) % 100}% ${(i * 61) % 100}%`,
                         filter: 'saturate(0.7) brightness(0.5) hue-rotate(-8deg)',
@@ -96,10 +97,11 @@ export function KlassenSection() {
                       href={`https://github.com/${s.github}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors"
+                      aria-label={`${s.fullName} på GitHub`}
+                      className="font-mono text-[11px] text-muted-2 hover:text-accent underline decoration-dotted underline-offset-2 decoration-muted-2/40 hover:decoration-accent transition-colors inline-flex items-center gap-0.5"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      @{s.github}
+                      GitHub <span aria-hidden="true">↗</span>
                     </a>
                   )}
                   {s.linkedin && (
@@ -107,10 +109,11 @@ export function KlassenSection() {
                       href={`https://linkedin.com/in/${s.linkedin}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-mono text-[11px] text-muted-2 hover:text-accent transition-colors"
+                      aria-label={`${s.fullName} på LinkedIn`}
+                      className="font-mono text-[11px] text-muted-2 hover:text-accent underline decoration-dotted underline-offset-2 decoration-muted-2/40 hover:decoration-accent transition-colors inline-flex items-center gap-0.5"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      LinkedIn
+                      LinkedIn <span aria-hidden="true">↗</span>
                     </a>
                   )}
                 </div>

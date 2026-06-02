@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { asset } from '../lib/asset'
 
 interface Props {
   text: { sv: string; en: string }
@@ -29,7 +30,7 @@ export function Quote({ text, attribution, variant = 'pull' }: Props) {
           <div
             className="absolute inset-0 opacity-30"
             style={{
-              backgroundImage: 'url(/nti-bg.jpg)',
+              backgroundImage: `url(${asset('/nti-bg.jpg')})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               filter: 'saturate(0.55) brightness(0.5) hue-rotate(-12deg)',

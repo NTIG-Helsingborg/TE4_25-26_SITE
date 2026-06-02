@@ -21,6 +21,8 @@ const chapters: Chapter[] = [
 /**
  * Film-reel chapter scrubber, fixed to right edge.
  * Highlights the chapter currently in view; click to scroll.
+ * Hidden below 1475px to avoid overlapping page content.
+ * Compact labels between 1475px and 1680px; full labels above that.
  */
 export function ChapterScrubber() {
   const { lang } = useLang()
@@ -52,28 +54,39 @@ export function ChapterScrubber() {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
+  const labelFor = (c: Chapter) =>
+    c.no === 'end' ? 'END' : `CH.${c.no} · ${strings.nav[c.key][lang]}`
+
+  const compactLabelFor = (c: Chapter) => (c.no === 'end' ? 'END' : c.no)
+
   return (
     <aside
       aria-label="chapter navigator"
-      className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-end gap-1.5"
+      className="fixed right-4 xl:right-6 top-1/2 -translate-y-1/2 z-40 hidden min-[1475px]:flex flex-col items-end gap-1.5 pointer-events-none"
     >
-      <div className="font-mono text-[9px] tracking-[0.18em] text-muted-2/60 uppercase mb-2">scenes</div>
+      <div className="font-mono text-[9px] tracking-[0.18em] text-muted-2/60 uppercase mb-2 pointer-events-auto">
+        scenes
+      </div>
       {chapters.map((c) => {
         const active = activeId === c.id
+        const fullLabel = labelFor(c)
         return (
           <button
             key={c.id}
             type="button"
             onClick={() => handleClick(c.id)}
-            className="group flex items-center gap-3"
+            className="group flex items-center gap-3 pointer-events-auto"
             aria-current={active ? 'true' : 'false'}
+            aria-label={fullLabel}
+            title={fullLabel}
           >
             <span
               className={`font-mono text-[10px] tracking-widest uppercase transition-colors ${
                 active ? 'text-fg' : 'text-muted-2/70 group-hover:text-muted'
               }`}
             >
-              {c.no === 'end' ? 'END' : `CH.${c.no}`} · {strings.nav[c.key][lang]}
+              <span className="min-[1680px]:hidden">{compactLabelFor(c)}</span>
+              <span className="hidden min-[1680px]:inline">{fullLabel}</span>
             </span>
             <span
               className={`h-px transition-all ${

@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 interface Props {
   /** Display size variant */
   size?: 'sm' | 'md' | 'lg' | 'xl'
@@ -16,7 +18,7 @@ const sizeClass: Record<NonNullable<Props['size']>, string> = {
 export function NTILogo({ size = 'md', invert = true, className = '' }: Props) {
   return (
     <img
-      src="/nti-logo.svg"
+      src={asset('/nti-logo.svg')}
       alt="NTI Gymnasiet"
       width={250}
       height={59}

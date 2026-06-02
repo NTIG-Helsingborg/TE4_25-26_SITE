@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { SectionHeader } from './SectionHeader'
+import { asset } from '../lib/asset'
 
 export function AplSection() {
   const { lang } = useLang()
@@ -43,8 +44,8 @@ export function AplSection() {
             photo="/photos/events/apl-malta.jpg"
             description={
               lang === 'sv'
-                ? 'Tre veckor i Malta. En annan sol, en annan kod-kultur, samma deadlines.'
-                : 'Three weeks in Malta. A different sun, a different code culture, the same deadlines.'
+                ? 'Tre veckor i Malta - samma stress, finare utsikt.'
+                : 'Three weeks in Malta - same stress, better view.'
             }
             timecode="00:51:34:06"
           />
@@ -75,7 +76,7 @@ function Country({ code, name, weeks, weeksLabel, tag, gradient, description, ti
       <div className="relative aspect-[21/9] overflow-hidden border-b border-border" style={{ background: gradient }}>
         {photo && (
           <img
-            src={photo}
+            src={asset(photo)}
             alt={name}
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"

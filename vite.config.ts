@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig(({ command }) => ({
-  base: command === 'serve' ? '/' : '/TE4_25-26_SITE/',
+  base: command === 'serve' ? '/' : '/25_26/',
   plugins: [react(), tailwindcss()],
 }))

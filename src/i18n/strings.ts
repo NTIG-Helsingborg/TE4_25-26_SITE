@@ -50,8 +50,8 @@ export const strings = {
     chapter: { sv: 'CH. 02 — PROJEKT', en: 'CH. 02 — THE WORK' },
     title: { sv: 'Vad vi byggde.', en: 'What we built.' },
     lede: {
-      sv: 'Tre projekt fick officiell hemvist i skolans GitHub-org. Resten ligger utspridda hos var och en av oss. Vi pushar in dem när vi orkar — eller låter dem leva på våra egna profiler. Båda räknas.',
-      en: 'Three projects got an official home in the school GitHub org. The rest are scattered across our personal accounts. We push them in when we can be bothered — or let them live on our own profiles. Both count.',
+      sv: 'Tre projekt fick officiell hemvist i skolans GitHub-org. Resten lever på våra egna profiler — spel, webbshoppar och API-experiment som växte fram vid sidan om. Här är ett urval.',
+      en: 'Three projects found an official home in the school GitHub org. The rest live on our own profiles — games, web shops, and API experiments that grew up on the side. Here is a selection.',
     },
     featuredLabel: { sv: 'featured · ntig-helsingborg / github', en: 'featured · ntig-helsingborg / github' },
     openSlot: { sv: 'Din plats väntar', en: 'Your slot is waiting' },
@@ -60,13 +60,15 @@ export const strings = {
       en: 'Add your project to the NTIG-Helsingborg org and it appears here.',
     },
     viewOnGithub: { sv: 'visa på github', en: 'view on github' },
+    viewMore: { sv: 'visa fler', en: 'view more' },
+    viewLess: { sv: 'visa färre', en: 'view less' },
   },
   apl: {
     chapter: { sv: 'CH. 03 — APL', en: 'CH. 03 — APL' },
     title: { sv: 'Tio veckor.\nTvå länder.', en: 'Ten weeks.\nTwo countries.' },
     lede: {
-      sv: 'Sju veckor i Sverige, tre i Malta. Tio veckor av att låtsas att vi visste vad vi gjorde — och någonstans i mitten började vi göra det på riktigt.',
-      en: 'Seven weeks in Sweden, three in Malta. Ten weeks of pretending we knew what we were doing — and somewhere in the middle, we started actually doing it.',
+      sv: 'Sju veckor hemma och tre veckor utomlands - en APL-period som gav oss både erfarenhet, ansvar och nya perspektiv.',
+      en: 'Seven weeks at home, three abroad - an APL period that gave us both experience, responsibility, and new perspectives.',
     },
     sweden: { sv: 'Sverige', en: 'Sweden' },
     malta: { sv: 'Malta', en: 'Malta' },
