@@ -324,13 +324,23 @@ export const students: Student[] = [
     projects: ['back-to-zero', 'ai-overwatch', 'ai-guard', 'steamdream', 'webbshop'],
   },
   {
-    id: 'ibraheem',
+    id: 'Ibraheem',
     fullName: 'Ibraheem Al-Shabee',
-    shortName: 'Ibraheem',
-    role: { sv: 'fullstack', en: 'fullstack' },
+    shortName: 'Ibbe',
+    role: { sv: 'frontend', en: 'frontend' },
     stack: ['HTML', 'CSS', 'JS', 'PHP'],
-    github: 'Ibbske',
-    projects: ['aiming-for-disaster', 'steamdream', 'snacky'],
+    github: 'IbraheemAlShabee',
+    linkedin: 'ibraheem-al-shabee-12345678',
+    photo: '/photos/portrait-11.jpg',
+    bio: {
+      sv: 'Jag studerar för närvarande på TE4 med inriktning mot IT och webbutveckling. Jag har ett särskilt intresse för webbdesign och tycker att det är intressant att arbeta med både det visuella och det tekniska i utvecklingsprocessen. Genom mina studier och egna projekt har jag utvecklat kunskaper inom webbutveckling och fortsätter att lära mig nya tekniker och arbetssätt. Jag uppskattar möjligheten att skapa webbplatser som är både funktionella och användarvänliga.',
+      en: 'I am currently studying TE4 with a specialization in IT and web development. I have a particular interest in web design and enjoy working with both the visual and technical aspects of the development process. Through my studies and personal projects, I have developed my skills in web development and continue to learn new technologies and methods. I appreciate the opportunity to create websites that are both functional and user-friendly',
+    },
+    quote: {
+      sv: 'Jag vill bygga webbsidor som hade kunnat användas av alla, oavsett teknisk kunskap.',
+      en: 'I want to build websites that could be used by anyone, regardless of technical knowledge.',
+    },
+    projects: ['ai-overwatch', 'Aiming For Disaster', 'steamdream', 'snacky'],
   },
   {
     id: 'isak-c',
