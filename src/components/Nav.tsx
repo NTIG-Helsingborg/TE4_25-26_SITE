@@ -64,7 +64,7 @@ export function Nav() {
 
   return (
     <>
-      <nav className="relative z-40 flex items-center justify-between border-b border-border bg-bg/85 px-4 py-4 backdrop-blur-md min-[1000px]:px-12">
+      <nav className="sticky top-0 z-40 flex items-center justify-between border-b border-border bg-bg/85 px-4 py-4 backdrop-blur-md min-[1000px]:px-12 min-[1475px]:relative">
         <Brand size="md" />
 
         {/* Desktop nav links */}

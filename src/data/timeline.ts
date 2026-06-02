@@ -5,7 +5,7 @@ export interface TimelineEvent {
   title: { sv: string; en: string }
   description: { sv: string; en: string }
   brief?: { sv: string; en: string }
-  tag?: 'apl' | 'project' | 'event' | 'cert' | 'end'
+  tag?: 'intro' | 'apl' | 'project' | 'event' | 'cert' | 'end'
   href?: string
 }
 
@@ -15,6 +15,21 @@ export interface TimelineEvent {
  * (specific names live in the projekt section). `href` makes rows clickable.
  */
 export const timeline: TimelineEvent[] = [
+  {
+    id: 'aug-intro',
+    month: 'aug',
+    date: { sv: 'augusti 2025', en: 'August 2025' },
+    title: { sv: 'Intro', en: 'Intro' },
+    brief: {
+      sv: 'TE4 startar — elva elever, ett klassrum, ett år framför oss.',
+      en: 'TE4 begins — eleven students, one classroom, one year ahead.',
+    },
+    description: {
+      sv: 'Uppstart på NTI Gymnasiet Helsingborg. Vi lär känna klassen, verktygen och tempot som ska följa oss från augusti till juni.',
+      en: 'Kick-off at NTI Gymnasiet Helsingborg. We meet the class, the tools and the pace that will carry us from August to June.',
+    },
+    tag: 'intro',
+  },
   {
     id: 'aug-webshop',
     month: 'aug',
@@ -100,12 +115,12 @@ export const timeline: TimelineEvent[] = [
     date: { sv: 'oktober 2025', en: 'October 2025' },
     title: { sv: 'Cercino', en: 'Cercino' },
     brief: {
-      sv: 'Gästbesök från eventbolaget Cercino i Helsingborg.',
-      en: 'Guest visit from event company Cercino in Helsingborg.',
+      sv: 'Gästbesök från delägare Lefteris Avramidis från eventbolaget Cercino i Helsingborg.',
+      en: 'Guest visit from Lefteris Avramidis from event company Cercino in Helsingborg.',
     },
     description: {
-      sv: 'Cercino delade hur de byggt studentevent, tech och community i Skåne — från Techship till nattklubb och morgonfester.',
-      en: 'Cercino shared how they built student events, tech and community in Skåne — from Techship to club nights and morning parties.',
+      sv: 'Lefteris delade sin erfarenhet av att använda verktyget figma och hur han använder det för att designa och utveckla webbplatser och appar.',
+      en: 'Lefteris shared his experience in the use of the tool figma and how he uses it to design and develop websites and apps.',
     },
     tag: 'event',
     href: 'https://www.linkedin.com/company/cercino-ab/',
@@ -247,8 +262,8 @@ export const timeline: TimelineEvent[] = [
       en: 'A site documenting the year.',
     },
     description: {
-      sv: 'Du läser den. React + Vite + Tailwind + framer-motion, hostad någonstans.',
-      en: 'You are reading it. React + Vite + Tailwind + framer-motion, hosted somewhere.',
+      sv: 'Du läser den. React + Vite + Tailwind + framer-motion, hostad på NTIs egna server.',
+      en: "You are reading it. React + Vite + Tailwind + framer-motion, hosted on NTI's own server.",
     },
     tag: 'project',
   },
@@ -262,8 +277,8 @@ export const timeline: TimelineEvent[] = [
       en: 'Last school day. Cap on. The end.',
     },
     description: {
-      sv: 'Tre år på NTI Gymnasiet Helsingborg. Avslut. Vi ses på andra sidan.',
-      en: 'Three years at NTI Gymnasiet Helsingborg. That is a wrap. See you on the other side.',
+      sv: 'Fjärde året på NTI for vissa första för andra, men sista för alla. Avslut. Vi ses på andra sidan.',
+      en: 'Forth year at NTI for some first for others, but last for us all. That is a wrap. See you on the other side.',
     },
     tag: 'end',
     href: '/om',

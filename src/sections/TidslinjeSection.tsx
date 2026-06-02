@@ -6,6 +6,7 @@ import { timeline, type TimelineEvent } from '../data/timeline'
 import { SectionHeader } from './SectionHeader'
 
 const tagColor: Record<string, string> = {
+  intro: 'text-muted border-border bg-fg/5',
   apl: 'text-accent border-accent bg-accent/10',
   project: 'text-accent-soft border-accent-soft bg-accent/5',
   event: 'text-fg border-fg/40 bg-fg/5',
