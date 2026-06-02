@@ -1,11 +1,16 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { SectionHeader } from './SectionHeader'
 import { asset } from '../lib/asset'
+import { AplMaltaModal } from '../components/AplMaltaModal'
+import { AplSwedenModal } from '../components/AplSwedenModal'
 
 export function AplSection() {
   const { lang } = useLang()
+  const [swedenOpen, setSwedenOpen] = useState(false)
+  const [maltaOpen, setMaltaOpen] = useState(false)
 
   return (
     <section className="relative mt-24">
@@ -33,6 +38,9 @@ export function AplSection() {
                 : 'Seven weeks at real companies in Sweden. We worked alongside developers who actually ship.'
             }
             timecode="00:51:12:18"
+            interactive
+            hint={lang === 'sv' ? 'visa värdar' : 'view hosts'}
+            onOpen={() => setSwedenOpen(true)}
           />
           <Country
             code="MT"
@@ -48,6 +56,9 @@ export function AplSection() {
                 : 'Three weeks in Malta - same stress, better view.'
             }
             timecode="00:51:34:06"
+            interactive
+            hint={lang === 'sv' ? 'visa värdar' : 'view hosts'}
+            onOpen={() => setMaltaOpen(true)}
           />
         </div>
 
@@ -57,22 +68,20 @@ export function AplSection() {
           <StatBig n="11" label={lang === 'sv' ? 'arbetsplatser' : 'workplaces'} />
         </div>
       </div>
+
+      <AplSwedenModal open={swedenOpen} onClose={() => setSwedenOpen(false)} />
+      <AplMaltaModal open={maltaOpen} onClose={() => setMaltaOpen(false)} />
     </section>
   )
 }
 
-function Country({ code, name, weeks, weeksLabel, tag, gradient, description, timecode, photo }: {
+function Country({ code, name, weeks, weeksLabel, tag, gradient, description, timecode, photo, interactive, hint, onOpen }: {
   code: string; name: string; weeks: string; weeksLabel: string; tag: string;
   gradient: string; description: string; timecode: string; photo?: string;
+  interactive?: boolean; hint?: string; onOpen?: () => void;
 }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-5% 0px' }}
-      transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-      className="relative bg-bg overflow-hidden"
-    >
+  const inner = (
+    <>
       <div className="relative aspect-[21/9] overflow-hidden border-b border-border" style={{ background: gradient }}>
         {photo && (
           <img
@@ -105,7 +114,42 @@ function Country({ code, name, weeks, weeksLabel, tag, gradient, description, ti
           </div>
         </div>
         <p className="font-mono text-[13px] leading-relaxed text-muted max-w-[52ch]">{description}</p>
+        {interactive && hint && (
+          <p className="mt-4 font-mono text-[11px] tracking-widest uppercase text-accent group-hover:translate-x-0.5 transition-transform">
+            {hint} →
+          </p>
+        )}
       </div>
+    </>
+  )
+
+  const className = `relative bg-bg overflow-hidden${interactive ? ' group cursor-pointer hover:bg-bg-2/40 transition-colors' : ''}`
+
+  if (interactive && onOpen) {
+    return (
+      <motion.button
+        type="button"
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-5% 0px' }}
+        transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+        onClick={onOpen}
+        className={`${className} w-full text-left`}
+      >
+        {inner}
+      </motion.button>
+    )
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-5% 0px' }}
+      transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+      className={className}
+    >
+      {inner}
     </motion.div>
   )
 }

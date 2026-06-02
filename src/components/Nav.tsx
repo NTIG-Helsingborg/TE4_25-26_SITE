@@ -1,18 +1,22 @@
 import { useState } from 'react'
-import { NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useLang } from '../contexts/lang'
 import { strings } from '../i18n/strings'
 import { Brand } from './Brand'
 
 const routes = [
-  { to: '/klassen', anchor: '#klassen', key: 'klassen' as const },
-  { to: '/projekt', anchor: '#projekt', key: 'projekt' as const },
-  { to: '/apl', anchor: '#apl', key: 'apl' as const },
-  { to: '/tidslinje', anchor: '#tidslinje', key: 'tidslinje' as const },
-  { to: '/galleri', anchor: '#galleri', key: 'galleri' as const },
-  { to: '/om', anchor: '#om', key: 'om' as const },
+  { anchor: '#klassen', key: 'klassen' as const },
+  { anchor: '#projekt', key: 'projekt' as const },
+  { anchor: '#apl', key: 'apl' as const },
+  { anchor: '#tidslinje', key: 'tidslinje' as const },
+  { anchor: '#galleri', key: 'galleri' as const },
+  { anchor: '#om', key: 'om' as const },
 ]
+
+function homeHash(anchor: string) {
+  return `/${anchor}`
+}
 
 function LangSwitcher({ className }: { className?: string }) {
   const { lang, setLang } = useLang()
@@ -40,19 +44,16 @@ function LangSwitcher({ className }: { className?: string }) {
 export function Nav() {
   const { lang } = useLang()
   const location = useLocation()
-  const navigate = useNavigate()
   const onHome = location.pathname === '/'
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const handleNav = (e: React.MouseEvent, r: (typeof routes)[number]) => {
-    if (!onHome) return // let NavLink handle routing
+    if (!onHome) return
     e.preventDefault()
     const el = document.querySelector(r.anchor)
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' })
       history.replaceState(null, '', r.anchor)
-    } else {
-      navigate(r.to)
     }
   }
 
@@ -69,12 +70,12 @@ export function Nav() {
         {/* Desktop nav links */}
         <ul className="hidden gap-7 font-mono text-xs tracking-wide min-[1000px]:flex">
           {routes.map((r) => (
-            <li key={r.to}>
+            <li key={r.anchor}>
               <NavLink
-                to={onHome ? r.anchor : r.to}
+                to={homeHash(r.anchor)}
                 onClick={(e) => handleNav(e, r)}
                 className={({ isActive }) =>
-                  `transition-colors hover:text-fg ${isActive && !onHome ? 'text-fg' : 'text-muted-2'}`
+                  `transition-colors hover:text-fg ${isActive ? 'text-fg' : 'text-muted-2'}`
                 }
               >
                 [{strings.nav[r.key][lang]}]
@@ -126,16 +127,16 @@ export function Nav() {
             <ul className="flex flex-col items-center gap-6 font-mono text-lg tracking-wide">
               {routes.map((r, i) => (
                 <motion.li
-                  key={r.to}
+                  key={r.anchor}
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.05 + i * 0.04, duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
                 >
                   <NavLink
-                    to={onHome ? r.anchor : r.to}
+                    to={homeHash(r.anchor)}
                     onClick={(e) => handleMobileNav(e, r)}
                     className={({ isActive }) =>
-                      `transition-colors hover:text-fg ${isActive && !onHome ? 'text-accent' : 'text-muted-2'}`
+                      `transition-colors hover:text-fg ${isActive ? 'text-accent' : 'text-muted-2'}`
                     }
                   >
                     [{strings.nav[r.key][lang]}]

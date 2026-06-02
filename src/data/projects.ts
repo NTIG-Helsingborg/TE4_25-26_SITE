@@ -1,3 +1,5 @@
+export type ProjectCategoryId = 'api' | 'game' | 'ai' | 'webshop'
+
 export interface Project {
   id: string
   name: string
@@ -10,8 +12,55 @@ export interface Project {
   primaryLanguage: string
   deployUrl?: string
   period: string
+  category?: ProjectCategoryId
   isOpenSlot?: boolean
 }
+
+export interface ProjectCategory {
+  id: ProjectCategoryId
+  chapter: { sv: string; en: string }
+  title: { sv: string; en: string }
+  lede: { sv: string; en: string }
+}
+
+export const projectCategories: ProjectCategory[] = [
+  {
+    id: 'api',
+    chapter: { sv: 'API-projekt', en: 'API project' },
+    title: { sv: 'API-projekt.', en: 'API projects.' },
+    lede: {
+      sv: 'Webbappar byggda runt ett externt API — hämta data, visa den snyggt och göra något användbart av den.',
+      en: 'Web apps built around an external API — fetch data, present it cleanly and make something useful out of it.',
+    },
+  },
+  {
+    id: 'game',
+    chapter: { sv: 'Spelprojekt', en: 'Game projects' },
+    title: { sv: 'Spelprojekt.', en: 'Game projects.' },
+    lede: {
+      sv: 'Spel byggda från grunden — egna mekaniker, egen känsla och en hel del iterationer.',
+      en: 'Games built from scratch — custom mechanics, their own feel and plenty of iteration.',
+    },
+  },
+  {
+    id: 'ai',
+    chapter: { sv: 'AI-projekt', en: 'AI projects' },
+    title: { sv: 'AI-projekt.', en: 'AI projects.' },
+    lede: {
+      sv: 'System som ser, resonerar och reagerar — från edge-AI på Jetson till övervakningsdashboards.',
+      en: 'Systems that see, reason and react — from edge AI on the Jetson to monitoring dashboards.',
+    },
+  },
+  {
+    id: 'webshop',
+    chapter: { sv: 'Webbshop', en: 'Webshop' },
+    title: { sv: 'Webbshoppar.', en: 'Webshops.' },
+    lede: {
+      sv: 'E-handelsprojekt byggda från grunden — produktlistor, kundvagn och allt däremellan.',
+      en: 'E-commerce projects built from scratch — product listings, carts and everything in between.',
+    },
+  },
+]
 
 export const projects: Project[] = [
   {
@@ -32,6 +81,7 @@ export const projects: Project[] = [
     primaryLanguage: 'JavaScript',
     deployUrl: 'https://roastbattles.azurewebsites.net/',
     period: 'okt — dec 2025',
+    category: 'api',
   },
   {
     id: 'back-to-zero',
@@ -50,6 +100,7 @@ export const projects: Project[] = [
     stack: ['c#', 'unity', 'game'],
     primaryLanguage: 'C#',
     period: 'nov — dec 2025',
+    category: 'game',
   },
   {
     id: 'ai-overwatch',
@@ -68,6 +119,7 @@ export const projects: Project[] = [
     stack: ['vue', 'ts', 'ai'],
     primaryLanguage: 'Vue',
     period: 'dec 2025',
+    category: 'ai',
   },
   {
     id: 'aiming-for-disaster',
@@ -86,6 +138,7 @@ export const projects: Project[] = [
     stack: ['c#', 'game'],
     primaryLanguage: 'C#',
     period: '2025',
+    category: 'game',
   },
   {
     id: 'ai-guard',
@@ -104,6 +157,7 @@ export const projects: Project[] = [
     stack: ['vue', 'ai', 'js'],
     primaryLanguage: 'Vue',
     period: '2025',
+    category: 'ai',
   },
   {
     id: 'verdenafall',
@@ -122,6 +176,7 @@ export const projects: Project[] = [
     stack: ['c#', 'game', 'roguelike'],
     primaryLanguage: 'C#',
     period: '2025',
+    category: 'game',
   },
   {
     id: 'steamdream',
@@ -137,9 +192,10 @@ export const projects: Project[] = [
       sv: 'API projekt för att hämta och visa Steam-spel på rea.',
       en: 'API project to fetch and display Steam games on sale.',
     },
-    stack: ['ts', 'game', 'music'],
+    stack: ['ts', 'api', 'steam'],
     primaryLanguage: 'TypeScript',
     period: '2025',
+    category: 'api',
   },
   {
     id: 'snacky',
@@ -158,6 +214,7 @@ export const projects: Project[] = [
     stack: ['html', 'css', 'js'],
     primaryLanguage: 'JavaScript',
     period: '2025',
+    category: 'webshop',
   },
   {
     id: 'hypixel-skyblock-tracker',
@@ -176,6 +233,7 @@ export const projects: Project[] = [
     stack: ['react', 'js', 'api'],
     primaryLanguage: 'JavaScript',
     period: '2025',
+    category: 'api',
   },
   {
     id: 'coffee-webshop',
@@ -194,6 +252,7 @@ export const projects: Project[] = [
     stack: ['html', 'css', 'js'],
     primaryLanguage: 'HTML',
     period: '2025',
+    category: 'webshop',
   },
   {
     id: 'webbshop',
@@ -212,6 +271,7 @@ export const projects: Project[] = [
     stack: ['html', 'css', 'js', 'node'],
     primaryLanguage: 'HTML',
     period: '2025',
+    category: 'webshop',
   },
   {
     id: 'open-slot',

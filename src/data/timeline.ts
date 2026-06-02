@@ -16,6 +16,69 @@ export interface TimelineEvent {
  */
 export const timeline: TimelineEvent[] = [
   {
+    id: 'aug-webshop',
+    month: 'aug',
+    date: { sv: 'augusti 2025', en: 'August 2025' },
+    title: { sv: 'Webbshop', en: 'Webshop' },
+    brief: {
+      sv: 'Bygg en webbshop med produktlistor och kundvagn.',
+      en: 'Build a webshop with product listings and a cart.',
+    },
+    description: {
+      sv: 'Klassens webbshoppar: Webbshop, Snacky och Coffee Webshop — e-handel byggd från grunden i HTML, CSS och JavaScript.',
+      en: 'The class webshops: Webbshop, Snacky and Coffee Webshop — e-commerce built from scratch in HTML, CSS and JavaScript.',
+    },
+    tag: 'project',
+    href: '/projekt/webshop',
+  },
+  {
+    id: 'aug-crealevant',
+    month: 'aug',
+    date: { sv: 'augusti 2025', en: 'August 2025' },
+    title: { sv: 'Crealevant', en: 'Crealevant' },
+    brief: {
+      sv: 'Gästbesök från webbyrån Crealevant i Helsingborg.',
+      en: 'Guest visit from the Crealevant web agency in Helsingborg.',
+    },
+    description: {
+      sv: 'Crealevant delade erfarenheter från webbutveckling och e-handel med WordPress och Magento — över 20 år i branschen.',
+      en: 'Crealevant shared experiences from web development and e-commerce with WordPress and Magento — over 20 years in the industry.',
+    },
+    tag: 'event',
+    href: 'https://www.linkedin.com/company/crealevant-ab/',
+  },
+  {
+    id: 'sep-jscert',
+    month: 'sep',
+    date: { sv: 'september 2025', en: 'September 2025' },
+    title: { sv: 'JavaScript-certifiering', en: 'JavaScript certification' },
+    brief: {
+      sv: 'JavaScript-certet.',
+      en: 'The JavaScript cert.',
+    },
+    description: {
+      sv: 'Första certet i raden. Klassrum till tentor till godkänd.',
+      en: 'First cert in the run. Classroom through exams to pass.',
+    },
+    tag: 'cert',
+  },
+  {
+    id: 'sep-klang',
+    month: 'sep',
+    date: { sv: 'september 2025', en: 'September 2025' },
+    title: { sv: 'Klang.ai', en: 'Klang.ai' },
+    brief: {
+      sv: 'Gästbesök från AI-bolaget Klang.ai i Helsingborg.',
+      en: 'Guest visit from AI company Klang.ai in Helsingborg.',
+    },
+    description: {
+      sv: 'Klang.ai berättade om hur de fångar, strukturerar och hittar signaler i samtal — europeisk AI byggd för integritet.',
+      en: 'Klang.ai talked about capturing, structuring and finding signals in conversations — European AI built for privacy.',
+    },
+    tag: 'event',
+    href: 'https://www.linkedin.com/company/klang-ai/',
+  },
+  {
     id: 'oct-api',
     month: 'okt',
     date: { sv: 'oktober 2025', en: 'October 2025' },
@@ -29,7 +92,23 @@ export const timeline: TimelineEvent[] = [
       en: 'Our class take on the assignment: RoastBattles — React + Vite, graffiti-styled UI, AI-generated roasts.',
     },
     tag: 'project',
-    href: '/projekt#proj-roastbattles',
+    href: '/projekt/api',
+  },
+  {
+    id: 'oct-cercino',
+    month: 'okt',
+    date: { sv: 'oktober 2025', en: 'October 2025' },
+    title: { sv: 'Cercino', en: 'Cercino' },
+    brief: {
+      sv: 'Gästbesök från eventbolaget Cercino i Helsingborg.',
+      en: 'Guest visit from event company Cercino in Helsingborg.',
+    },
+    description: {
+      sv: 'Cercino delade hur de byggt studentevent, tech och community i Skåne — från Techship till nattklubb och morgonfester.',
+      en: 'Cercino shared how they built student events, tech and community in Skåne — from Techship to club nights and morning parties.',
+    },
+    tag: 'event',
+    href: 'https://www.linkedin.com/company/cercino-ab/',
   },
   {
     id: 'nov-game',
@@ -45,7 +124,23 @@ export const timeline: TimelineEvent[] = [
       en: 'Our take: Back-To-Zero — Berserk-inspired 2D roguelike in Unity / C#. Your blood is your mana.',
     },
     tag: 'project',
-    href: '/projekt#proj-back-to-zero',
+    href: '/projekt/game',
+  },
+  {
+    id: 'nov-buildahome',
+    month: 'nov',
+    date: { sv: 'november 2025', en: 'November 2025' },
+    title: { sv: 'Buildahome Digital', en: 'Buildahome Digital' },
+    brief: {
+      sv: 'Gästbesök från webbyrån Buildahome Digital i Helsingborg.',
+      en: 'Guest visit from the Buildahome Digital web agency in Helsingborg.',
+    },
+    description: {
+      sv: 'Buildahome berättade om webbutveckling, design, SEO och digital strategi — skräddarsydda lösningar för medelstora och stora företag.',
+      en: 'Buildahome talked about web development, design, SEO and digital strategy — tailored solutions for mid-size and large companies.',
+    },
+    tag: 'event',
+    href: 'https://www.linkedin.com/company/buildahome/',
   },
   {
     id: 'dec-jetson',
@@ -61,7 +156,23 @@ export const timeline: TimelineEvent[] = [
       en: 'Our take: AI-Overwatch — edge AI on Jetson, OpenCV camera pipeline, Vue dashboard.',
     },
     tag: 'project',
-    href: '/projekt#proj-ai-overwatch',
+    href: '/projekt/ai',
+  },
+  {
+    id: 'dec-margo',
+    month: 'dec',
+    date: { sv: 'december 2025', en: 'December 2025' },
+    title: { sv: 'Margo · spelutvecklare', en: 'Margo · game developer' },
+    brief: {
+      sv: 'Gästbesök från spelutvecklaren Margo.',
+      en: 'Guest visit from game developer Margo.',
+    },
+    description: {
+      sv: 'Margarita Shaposhnikova (Margo) delade erfarenheter från spelutveckling och vad det innebär att jobba i branschen.',
+      en: 'Margarita Shaposhnikova (Margo) shared experiences from game development and what it means to work in the industry.',
+    },
+    tag: 'event',
+    href: 'https://www.linkedin.com/in/margarita-shaposhnikova-a3694828b/',
   },
   {
     id: 'jan-hetchhacks',
@@ -76,44 +187,12 @@ export const timeline: TimelineEvent[] = [
       sv: 'Klassen splittras i lag, river en deadline och bygger något skarpt.',
       en: 'The class splits into teams, tears through a deadline, ships something real.',
     },
-    tag: 'event',
-    href: 'https://hetchhacks.com',
+    tag: 'event'
   },
   {
-    id: 'feb-jscert',
-    month: 'feb',
-    date: { sv: 'februari 2026', en: 'February 2026' },
-    title: { sv: 'JavaScript-certifiering', en: 'JavaScript certification' },
-    brief: {
-      sv: 'JavaScript-certet.',
-      en: 'The JavaScript cert.',
-    },
-    description: {
-      sv: 'Första certet i raden. Klassrum till tentor till godkänd.',
-      en: 'First cert in the run. Classroom through exams to pass.',
-    },
-    tag: 'cert',
-  },
-  {
-    id: 'mar-apl-se',
+    id: 'mar-apl-mt',
     month: 'mar',
     date: { sv: 'mars 2026', en: 'March 2026' },
-    title: { sv: 'APL · Sverige', en: 'APL · Sweden' },
-    brief: {
-      sv: 'Sju veckor arbetsplatsförlagt lärande på riktiga företag i Sverige.',
-      en: 'Seven weeks of work placement at real companies in Sweden.',
-    },
-    description: {
-      sv: 'Vi gick från klassrum till skarpa team. Olika roller, samma deadlines.',
-      en: 'We went from classroom to real teams. Different roles, same deadlines.',
-    },
-    tag: 'apl',
-    href: '/apl',
-  },
-  {
-    id: 'apr-apl-mt',
-    month: 'apr',
-    date: { sv: 'april 2026', en: 'April 2026' },
     title: { sv: 'APL · Malta', en: 'APL · Malta' },
     brief: {
       sv: 'Tre veckor APL i Malta — annan sol, samma deadlines.',
@@ -124,7 +203,23 @@ export const timeline: TimelineEvent[] = [
       en: 'Valletta and Sliema. International work culture, English in the office.',
     },
     tag: 'apl',
-    href: '/apl',
+    href: '/#apl',
+  },
+  {
+    id: 'apr-apl-se',
+    month: 'apr',
+    date: { sv: 'april 2026', en: 'April 2026' },
+    title: { sv: 'APL · Sverige', en: 'APL · Sweden' },
+    brief: {
+      sv: 'Sju veckor arbetsplatsförlagt lärande på riktiga företag i Sverige.',
+      en: 'Seven weeks of work placement at real companies in Sweden.',
+    },
+    description: {
+      sv: 'Vi gick från klassrum till skarpa team. Olika roller, samma deadlines.',
+      en: 'We went from classroom to real teams. Different roles, same deadlines.',
+    },
+    tag: 'apl',
+    href: '/#apl',
   },
   {
     id: 'may-thesis',
@@ -140,7 +235,7 @@ export const timeline: TimelineEvent[] = [
       en: 'Each student writes their own thesis in areas like tech, AI, UX, games and more. Titles and summaries are on the student profiles under the class section.',
     },
     tag: 'project',
-    href: '/klassen',
+    href: '/#klassen',
   },
   {
     id: 'may-yearsite',
@@ -155,7 +250,7 @@ export const timeline: TimelineEvent[] = [
       sv: 'Du läser den. React + Vite + Tailwind + framer-motion, hostad någonstans.',
       en: 'You are reading it. React + Vite + Tailwind + framer-motion, hosted somewhere.',
     },
-    tag: 'event',
+    tag: 'project',
   },
   {
     id: 'jun-avslut',
