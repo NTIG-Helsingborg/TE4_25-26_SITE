@@ -86,7 +86,7 @@ export const strings = {
     chapter: { sv: 'CH. 05 — GALLERI', en: 'CH. 05 — GALLERY' },
     title: { sv: 'Stillbilder.', en: 'Stills.' },
     lede: {
-      sv: 'Bevismaterial. Klassrum, hackathons, APL, och alldeles för många kaffepauser. Det riktiga gallerit följer när vi får tag på fotograferna.',
+      sv: 'Bevismaterial. Klassrum, hackathons, APL, och alldeles för många kaffepauser. Här är en årssummering i form av stillbilder.',
       en: 'Evidence. Classrooms, hackathons, APL, and far too many coffee breaks. The real gallery follows once we can corner the photographers.',
     },
     placeholder: { sv: 'foto kommer', en: 'photo coming' },
