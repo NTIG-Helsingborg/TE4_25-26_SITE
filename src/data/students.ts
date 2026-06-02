@@ -107,8 +107,17 @@ export const students: Student[] = [
     id: 'ibraheem',
     fullName: 'Ibraheem Al-Shabee',
     shortName: 'Ibraheem',
-    role: { sv: 'fullstack', en: 'fullstack' },
-    stack: ['HTML', 'CSS', 'JS', 'PHP'],
+    role: { sv: 'Frontend', en: 'Frontend' },
+    stack: ['HTML', 'CSS', 'JS', ],
+    photo: '/photos/portrait-11.jpg',
+    bio: {
+      sv: 'Jag studerar för närvarande på TE4 med inriktning mot IT och webbutveckling. Jag har ett särskilt intresse för webbdesign och tycker att det är intressant att arbeta med både det visuella och det tekniska i utvecklingsprocessen. Genom mina studier och egna projekt har jag utvecklat kunskaper inom webbutveckling och fortsätter att lära mig nya tekniker och arbetssätt. Jag uppskattar möjligheten att skapa webbplatser som är både funktionella och användarvänliga.',
+      en: 'I am currently studying TE4 with a specialization in IT and web development. I have a particular interest in web design and enjoy working with both the visual and technical aspects of the development process. Through my studies and personal projects, I have developed my skills in web development and continue to learn new technologies and methods. I appreciate the opportunity to create websites that are both functional and user-friendly.',
+    },
+    quote: {
+      sv: 'Jag vill göra webbsidor som hade kunnat passa vem som helst',
+      en: 'I want to make websites that could fit anyone',
+    },
   },
   {
     id: 'isak-c',
