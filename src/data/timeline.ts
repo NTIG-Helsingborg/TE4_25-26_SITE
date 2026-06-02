@@ -127,6 +127,22 @@ export const timeline: TimelineEvent[] = [
     href: '/apl',
   },
   {
+    id: 'may-thesis',
+    month: 'maj',
+    date: { sv: 'maj 2026', en: 'May 2026' },
+    title: { sv: 'Examensarbete', en: 'Thesis project' },
+    brief: {
+      sv: 'Individuellt projekt: formulera en fråga, undersök och redovisa.',
+      en: 'Individual project: formulate a question, investigate and present your findings.',
+    },
+    description: {
+      sv: 'Varje elev skriver sitt eget examensarbete inom teknik, AI, UX, spel och mer. Titlar och sammanfattningar finns på elevprofilerna under klassen.',
+      en: 'Each student writes their own thesis in areas like tech, AI, UX, games and more. Titles and summaries are on the student profiles under the class section.',
+    },
+    tag: 'project',
+    href: '/klassen',
+  },
+  {
     id: 'may-yearsite',
     month: 'maj',
     date: { sv: 'maj 2026', en: 'May 2026' },
