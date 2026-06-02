@@ -329,8 +329,8 @@ export const students: Student[] = [
     shortName: 'Ibbe',
     role: { sv: 'frontend', en: 'frontend' },
     stack: ['HTML', 'CSS', 'JS', 'PHP'],
-    github: 'IbraheemAlShabee',
-    linkedin: 'ibraheem-al-shabee-12345678',
+    github: 'Ibbske',
+    linkedin: 'ibraheem-al-shabee-07796737a',
     photo: '/photos/portrait-11.jpg',
     bio: {
       sv: 'Jag studerar för närvarande på TE4 med inriktning mot IT och webbutveckling. Jag har ett särskilt intresse för webbdesign och tycker att det är intressant att arbeta med både det visuella och det tekniska i utvecklingsprocessen. Genom mina studier och egna projekt har jag utvecklat kunskaper inom webbutveckling och fortsätter att lära mig nya tekniker och arbetssätt. Jag uppskattar möjligheten att skapa webbplatser som är både funktionella och användarvänliga.',
