@@ -29,7 +29,7 @@ export function AplSection() {
             name={strings.apl.sweden[lang]}
             weeks="7"
             weeksLabel={strings.apl.weeks[lang]}
-            tag="ntig · carl krooks gata 9 · helsingborg"
+            tag="helsingborg"
             gradient="linear-gradient(160deg, oklch(0.22 0.05 240) 0%, oklch(0.12 0.04 240) 100%)"
             photo="/photos/events/apl-sverige.jpg"
             description={
