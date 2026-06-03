@@ -380,7 +380,23 @@ export const students: Student[] = [
       sv: '"Hur påverkas junior utvecklares lärande av AI-verktyg?"',
       en: '"How does the learning of junior developers get affected by AI tools?"',
     },
-    projects: ['back-to-zero', 'ai-guard', 'snacky', 'hypixel-skyblock-tracker']
+    projects: ['back-to-zero', 'ai-guard', 'snacky', 'hypixel-skyblock-tracker'],
+    aplSweden: {
+      placeId: 'cercino',
+      photo: '/photos/apl/Cercino.jpg',
+      summary: {
+        sv: 'På Cercino fick jag tillfället att arbeta med deras biljet applikation.',
+        en: 'At Cercino I had the opportunity to work on their ticketapp.',
+      },
+    },
+    aplMalta: {
+      placeId: 'connecticlub-andi',
+      photo: '/photos/apl/CarlAPLMalta.jpg',
+      summary: {
+        sv: 'På Connecticlub fick jag i uppdrag att bygga en bokningswebbplats för deras fastigheter från grunden.',
+        en: 'At Connecticlub I was tasked with building a booking website for their properties from scratch.',
+      },
+    },
   },
   {
     id: 'damian',
