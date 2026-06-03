@@ -222,6 +222,7 @@ export const projects: Project[] = [
     org: 'NTIG-Helsingborg',
     repo: 'React-API',
     url: 'https://github.com/NTIG-Helsingborg/React-API',
+    deployUrl: 'https://hypixeltracker.azurewebsites.net/',
     tagline: {
       sv: 'API-projekt som håller koll på din Skyblock-progress.',
       en: 'API project that tracks your Skyblock progress.',

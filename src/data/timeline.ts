@@ -32,8 +32,8 @@ export const timeline: TimelineEvent[] = [
   },
   {
     id: 'sep-ai',
-    month: 'sep',
-    date: { sv: 'september 2025', en: 'September 2025' },
+    month: 'augusti 2025',
+    date: { sv: 'augusti 2025', en: 'August 2025' },
     title: { sv: 'AI-projekt', en: 'AI project' },
     brief: {
       sv: 'Bygg AI-verktyg för att lösa riktiga problem.',
