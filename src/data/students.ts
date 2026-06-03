@@ -218,7 +218,7 @@ export const students: Student[] = [
   },
   {
     id: 'eliah',
-    fullName: 'Eliah Bäckström Dimmed',
+    fullName: 'Eliah Dimmed',
     shortName: 'Eliah',
     role: { sv: 'Frontendutveckling', en: 'Frontend development' },
     stack: ['HTML', 'CSS', 'React', 'JS', 'TS', 'AI', 'C#', 'SQL', 'Vue'],
