@@ -147,8 +147,8 @@ export function Home() {
 
       <Quote
         text={{
-          sv: 'Elva personer, en uppgift i taget, och ett helt år av att lista ut hur man bygger saker tillsammans.',
-          en: 'Eleven people, one brief at a time, and a whole year of figuring out how to build things together.',
+          sv: 'Elva personer och ett helt år av att lista ut hur man bygger saker tillsammans.',
+          en: 'Eleven people and a whole year of figuring out how to build things together.',
         }}
         attribution={{ sv: 'TE4_25-26 · klassen', en: 'TE4_25-26 · the class' }}
         variant="film-card"
