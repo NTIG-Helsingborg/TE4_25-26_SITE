@@ -65,7 +65,7 @@ export function AplSection() {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-border border border-border">
           <StatBig n="10" label={lang === 'sv' ? 'veckor totalt' : 'total weeks'} />
           <StatBig n="02" label={lang === 'sv' ? 'länder' : 'countries'} />
-          <StatBig n="11" label={lang === 'sv' ? 'arbetsplatser' : 'workplaces'} />
+          <StatBig n="16" label={lang === 'sv' ? 'arbetsplatser' : 'workplaces'} />
         </div>
       </div>
 
