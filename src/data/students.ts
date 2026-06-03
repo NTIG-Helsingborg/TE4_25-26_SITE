@@ -203,7 +203,43 @@ export const students: Student[] = [
       sv: 'If it works, don\'t touch it',
       en: 'If it works, don\'t touch it',
     },
-    projects: ['ai-overwatch', 'aiming-for-disaster', 'ai-guard', 'hypixel-skyblock-tracker', 'coffee-webshop'],
+    projects: ['aiming-for-disaster', 'ai-guard', 'hypixel-skyblock-tracker', 'coffee-webshop'],
+    personalProjects: [
+      {
+        name: 'Home-E',
+        url: 'https://github.com/Mykyta-G/Home-E',
+        tagline: {
+          sv: 'Familjehanteringsapp byggd i Vue 3 + Electron under HetchHacks 2025 — från hackathon-prototyp till iOS/Android/Web.',
+          en: 'Family-management app built with Vue 3 + Electron at HetchHacks 2025 — from hackathon prototype to iOS/Android/Web.',
+        },
+        stack: ['vue', 'electron', 'ts'],
+        primaryLanguage: 'Vue',
+        period: 'nov 2025 — jan 2026',
+      },
+      {
+        name: '1Percent',
+        url: 'https://github.com/eliahdim/1Percent',
+        tagline: { 
+          sv: 'App där du sätter upp dina mål i en trädstruktur och "blir 1% bättre varje dag".',
+          en: 'App where you set up your goals in a tree structure and "get 1% better every day".',
+        },
+        stack: ['react', 'vite', 'js'],
+        primaryLanguage: 'JavaScript',
+        period: 'feb — mar 2026',
+      },
+      {
+        name: 'Portfolio',
+        url: 'https://github.com/eliahdim/portfolio',
+        deployUrl: 'https://eliahdim.github.io/portfolio/',
+        tagline: {
+          sv: 'Min personliga portfolio-sajt byggd i HTML/CSS/JS - kolla gärna på den!',
+          en: 'My personal portfolio site built in HTML/CSS/JS - feel free to check it out!',
+        },
+        stack: ['html', 'css', 'js'],
+        primaryLanguage: 'HTML',
+        period: 'nov 2025 — maj 2026',
+      },
+    ],
     thesis: {
       sv: '"En undersökning av hur strukturerade tekniker påverkar kvaliteten och precisionen i LLM-svar."',
       en: '"An investigation into how structured techniques affect the quality and precision of LLM responses."',
