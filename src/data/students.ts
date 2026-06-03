@@ -376,6 +376,22 @@ export const students: Student[] = [
       en: "If it ain't broke don't fix it",
     },
     projects: ['roastbattles', 'ai-overwatch', 'verdenafall', 'webbshop'],
+    aplSweden: {
+      placeId: 'avitus',
+      photo: '/photos/img_1879.jpg',
+      summary: {
+        sv: 'På Avitus jobbade jag med LegalBuddy-plattformen och fick lära mig hur ett riktigt utvecklingsteam jobbar — från krav och kod till tester och deploy.',
+        en: 'At Avitus I worked on the LegalBuddy platform and got to see how a real development team operates — from requirements and code to testing and deployment.',
+      },
+    },
+    aplMalta: {
+      placeId: 'ascencia-damian',
+      photo: '/photos/img_4067.jpg',
+      summary: {
+        sv: 'På Ascencia Malta School fick jag jobba med webbutveckling i en internationell miljö och praktisera engelska på riktigt vid sidan om kodandet.',
+        en: 'At Ascencia Malta School I worked on web development in an international setting and got to use English for real alongside the coding.',
+      },
+    },
   },
   {
     id: 'finn',
