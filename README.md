@@ -71,3 +71,25 @@ export default defineConfig([
   },
 ])
 ```
+
+## Projects
+
+### API projects
+- [RoastBattles](https://github.com/NTIG-Helsingborg/TE4_25-26_RoastBattles) — competitive roasting in graffiti style. React + Vite.
+- [Steamdream](https://github.com/KebabMumsare/SteamDream) — shows all Steam games on sale. TypeScript.
+- [Hypixel Skyblock Tracker](https://github.com/NTIG-Helsingborg/React-API) — tracks your Skyblock progress. React.
+
+### Game projects
+- [Back-To-Zero](https://github.com/NTIG-Helsingborg/TE4_25-26_Back-To-Zero) — a dark Berserk-inspired 2D roguelike. Unity / C#.
+- [Aiming For Disaster](https://github.com/KebabMumsare/Aiming-for-Disaster) — a game project where aim and chaos go hand in hand. C#.
+- [Verdenafall](https://github.com/KevinHermansson/fuck-ass-rouglike) — a roguelike where the world falls apart around you. C#.
+
+### AI projects
+- [AI-Overwatch](https://github.com/NTIG-Helsingborg/AI-Overwatch) — dashboard for monitoring AI behaviour. Vue + TypeScript.
+- [AI Guard](https://github.com/KebabMumsare/AI_Guard) — AI-powered guard that keeps watch on what moves. Vue.
+
+### Webshops
+- [Snacky](https://github.com/NTIG-Helsingborg/TE4_25-26_WebShop) — a snack webshop, built from scratch. HTML / CSS / JS.
+- [Coffee Webshop](https://github.com/eliahdim/coffeeWebshop) — a webshop for coffee lovers. HTML / CSS.
+- [Webbshop](https://github.com/Mykyta-G/Webbshop) — webshop with its own backend. HTML / CSS / JS / Node.
+

@@ -339,7 +339,7 @@ export const students: Student[] = [
       sv: "If it ain't broke don't fix it",
       en: "If it ain't broke don't fix it",
     },
-    projects: ['roastbattles', 'ai-overwatch', 'verdenafall', 'aiming-for-disaster', 'webbshop'],
+    projects: ['roastbattles', 'ai-overwatch', 'verdenafall', 'webbshop'],
   },
   {
     id: 'finn',
