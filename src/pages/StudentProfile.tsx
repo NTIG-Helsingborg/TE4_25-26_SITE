@@ -211,6 +211,33 @@ export function StudentProfile() {
         </ul>
       </motion.section>
 
+      {/* Certificates */}
+      {student.certificates && student.certificates.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25, ease }}
+          className="px-12 max-w-[960px] mx-auto mb-14"
+        >
+          <div className="font-mono text-[11px] text-muted-2 tracking-widest uppercase mb-4 flex items-center gap-3">
+            <span className="text-accent">&middot;</span>
+            <span>{lang === 'sv' ? 'Certifikat' : 'Certificates'}</span>
+            <span className="flex-1 h-px bg-border" />
+          </div>
+          <ul className="flex flex-wrap gap-2">
+            {student.certificates.map((c) => (
+              <li
+                key={c}
+                className="font-mono text-[11px] text-fg-2 border border-border bg-bg-2 px-2.5 py-1 tracking-wide flex items-center gap-1.5"
+              >
+                <span className="text-accent text-[10px]">✓</span>
+                {c}
+              </li>
+            ))}
+          </ul>
+        </motion.section>
+      )}
+
       {/* APL */}
       <StudentAplSection student={student} />
 

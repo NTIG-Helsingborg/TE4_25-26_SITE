@@ -13,6 +13,7 @@ export interface Student {
   shortName: string
   role: { sv: string; en: string }
   stack: string[]
+  certificates?: string[]
   quote?: { sv: string; en: string }
   bio?: { sv: string; en: string }
   github?: string
@@ -54,6 +55,7 @@ export const students: Student[] = [
     shortName: 'Mykyta',
     role: { sv: 'grundare Simple Schedules · AI & agenter', en: 'founder of Simple Schedules · AI & agents' },
     stack: ['React', 'TypeScript', 'Python', 'AI', 'Vue', 'Swift', 'C++', 'C#', 'Java', 'Electron'],
+    certificates: ['JavaScript'],
     bio: {
       sv: 'Mykyta är grundare av Simple Schedules och klassens AI- och agentmänniska. Han bygger AI-verktyg och agentbaserade system — mjukvara som resonerar och agerar på egen hand. Hans största projekt under året är Project-Overseer, en personlig AI-infrastruktur med fem specialiserade agenter, ett väckningsord och ett fysiskt skrivbordsgränssnitt. Vid sidan av det har han byggt allt från macOS-appar som Workspace-Buddy och Focus-Wave till CLI-verktyget One-Line och hackathon-projektet Home-E i Vue + Electron. På TE4 vid NTI Gymnasiet Helsingborg var han med i RoastBattles, klassens API-projekt i React + Vite. Han gillar att äga ett projekt hela vägen — från frontend till Python- och AI-arbetet bakom — och när något kan automatiseras eller lämnas över till en agent är det oftast där man hittar honom.',
       en: 'Mykyta is the founder of Simple Schedules and the AI-and-agents person in the class. He builds AI tooling and agentic systems — software that reasons and acts on its own. His biggest project this year is Project-Overseer, a personal AI infrastructure with five specialized agents, a wake word and a physical desk interface. Alongside it he has built everything from macOS apps like Workspace-Buddy and Focus-Wave to the One-Line CLI tool and the Home-E hackathon project in Vue + Electron. At TE4 (NTI Gymnasiet Helsingborg) he worked on RoastBattles, the class API project built with React + Vite. He likes owning a project end to end — from the frontend to the Python and AI work behind it — and when something can be automated or handed off to an agent, that is usually where you will find him.',
@@ -180,6 +182,7 @@ export const students: Student[] = [
     shortName: 'Carl',
     role: { sv: 'fullstack', en: 'fullstack' },
     stack: ['HTML', 'CSS', 'JS', 'TS', 'Java', 'Luau', 'C#', 'C++', 'SQL', 'React', 'Vue', 'Laravel', 'Express'],
+    certificates: ['HTML & CSS', 'Java', 'JavaScript'],
     quote: {
       sv: 'Vissa devs skriver ren kod. Jag skriver rena prompts. Ingen funktion lämnad öppen för tolkning. Sex stycken, minimum.',
       en: 'Some devs write clean code. I write clean prompts. No feature left up for interpretation. Six paragraphs, minimum.',
@@ -218,7 +221,8 @@ export const students: Student[] = [
     fullName: 'Eliah Bäckström Dimmed',
     shortName: 'Eliah',
     role: { sv: 'Frontendutveckling', en: 'Frontend development' },
-    stack: ['HTML', 'CSS', 'React', 'JS', 'TS', 'AI', 'C#', 'SQL', 'Vue',],
+    stack: ['HTML', 'CSS', 'React', 'JS', 'TS', 'AI', 'C#', 'SQL', 'Vue'],
+    certificates: ['JavaScript'],
     github: 'eliahdim',
     linkedin: 'eliah-dimmed',
     isAuthor: true,
@@ -295,6 +299,7 @@ export const students: Student[] = [
     shortName: 'Isak P.',
     role: { sv: 'frontend', en: 'frontend' },
     stack: ['HTML', 'CSS', 'React', 'Figma', 'JS', 'C#'],
+    certificates: ['JavaScript'],
     github: 'IsakPetersson',
     linkedin: 'isak-petersson-801a2937a',
     photo: '/photos/IsakP_Portrait.jpg',
@@ -318,6 +323,7 @@ export const students: Student[] = [
     shortName: 'Jesper',
     role: { sv: 'backendutvecklare', en: 'backend developer' },
     stack: ['React', 'TypeScript', 'Python', 'Node.js', 'C#', 'SQL', 'Docker'],
+    certificates: ['JavaScript'],
     bio: {
       sv: 'Jag är en backendutvecklare med erfarenhet av flera programmeringsspråk och tekniker. Jag har arbetat med React, TypeScript, Python, Node.js, C# och SQL, och tycker särskilt om att bygga stabila system, API:er och databaser som fungerar bra bakom kulisserna. I mina projekt har jag även använt Docker och PostgreSQL, vilket har gett mig en bättre förståelse för hur applikationer kan utvecklas, köras och hantera data på ett strukturerat sätt.',
       en: 'I am a backend developer with experience in multiple programming languages and technologies. I have worked with React, TypeScript, Python, Node.js, C# and SQL, and particularly enjoy building stable systems, APIs and databases that work well behind the scenes. In my projects I have also used Docker and PostgreSQL, which has given me a better understanding of how applications can be developed, run and handle data in a structured way.',
@@ -338,6 +344,7 @@ export const students: Student[] = [
     shortName: 'Kevin',
     role: { sv: 'Backend', en: 'Backend' },
     stack: ['HTML', 'CSS', 'JavaScript', 'postgreSQL', 'Docker', 'TypeScript', 'Java'],
+    certificates: ['JavaScript'],
     bio: {
       sv: 'Jag gillar att jobba med backend och designa system, samtidigt som jag bygger AI och chatbots som fungerar i praktiken. Under TE4 har jag jobbat med projekt som Verdenafall och Hypixel Skyblock Tracker och försökt hitta balansen mellan teknik, struktur och verkliga användarbehov.',
       en: 'I enjoy working with backend and designing systems, while also building AI and chatbots that work in practice. During TE4 I have worked on projects like Verdenafall and Hypixel Skyblock Tracker and tried to find the balance between technology, structure and real user needs.',
@@ -357,6 +364,7 @@ export const students: Student[] = [
     shortName: 'Andi',
     role: { sv: 'spelutveckling', en: 'game dev' },
     stack: ['C#', 'Unity', 'TypeScript', 'JS'],
+    certificates: ['JavaScript'],
     github: 'AndiGj',
     linkedin: 'andi-gjomakaj-75b66337b',
     photo: '/photos/portrait-09.jpg',
@@ -380,6 +388,7 @@ export const students: Student[] = [
     shortName: 'Damian',
     role: { sv: 'webbutveckling', en: 'web dev' },
     stack: ['React', 'Java', 'JS', 'HTML', 'CSS', 'Svelte', 'Vue'],
+    certificates: ['JavaScript'],
     linkedin: 'damian-dacic-88934537b',
     github: 'Ghost-With-A-Shoe',
     photo: '/photos/portrait-02.jpg',
@@ -399,6 +408,7 @@ export const students: Student[] = [
     shortName: 'Finn',
     role: { sv: 'systemutveckling', en: 'systems' },
     stack: ['React', 'Java', 'JS', 'HTML', 'CSS', 'Figma', 'Vue', 'Node'],
+    certificates: ['JavaScript'],
     github: 'Finn-S123',
     linkedin: 'finn-skattum-11387237b',
     bio: {
@@ -418,6 +428,7 @@ export const students: Student[] = [
     shortName: 'Ibbe',
     role: { sv: 'frontend', en: 'frontend' },
     stack: ['HTML', 'CSS', 'JS', 'PHP'],
+    certificates: ['JavaScript'],
     github: 'Ibbske',
     linkedin: 'ibraheem-al-shabee-07796737a',
     photo: '/photos/portrait-11.jpg',
@@ -437,6 +448,7 @@ export const students: Student[] = [
     shortName: 'Isak C.',
     role: { sv: 'frontend', en: 'frontend' },
     stack: ['HTML', 'CSS', 'React', 'Figma', 'JS', 'WordPress', 'C#'],
+    certificates: ['JavaScript'],
     github: 'isakcarlsson25',
     linkedin: 'isak-carlsson-73076737a',
     isAuthor: true,
