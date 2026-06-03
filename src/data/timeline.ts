@@ -79,6 +79,21 @@ export const timeline: TimelineEvent[] = [
     href: 'https://www.linkedin.com/in/patriciosilvau/',
   },
   {
+    id: 'aug-linnea',
+    month: 'aug',
+    date: { sv: 'augusti 2025', en: 'August 2025' },
+    title: { sv: 'Linnea · alumni', en: 'Linnea · alumni' },
+    brief: {
+      sv: 'Gästbesök från TE4-alumni Linnea.',
+      en: 'Guest visit from TE4 alumni Linnea.',
+    },
+    description: {
+      sv: 'Linnea berättade om sin karriär efter TE4 — på Biltema och tretton37.',
+      en: 'Linnea talked about her career after TE4 — at Biltema and tretton37.',
+    },
+    tag: 'event',
+  },
+  {
     id: 'sep-jscert',
     month: 'sep',
     date: { sv: 'september 2025', en: 'September 2025' },
