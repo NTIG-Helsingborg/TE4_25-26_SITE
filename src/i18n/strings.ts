@@ -50,8 +50,8 @@ export const strings = {
     chapter: { sv: 'CH. 02 — PROJEKT', en: 'CH. 02 — THE WORK' },
     title: { sv: 'Vad vi byggde.', en: 'What we built.' },
     lede: {
-      sv: 'Tre projekt fick officiell hemvist i skolans GitHub-org. Resten lever på våra egna profiler — spel, webbshoppar och API-experiment som växte fram vid sidan om. Här är ett urval.',
-      en: 'Three projects found an official home in the school GitHub org. The rest live on our own profiles — games, web shops, and API experiments that grew up on the side. Here is a selection.',
+      sv: 'En blandning av spel, webbshoppar och API-experiment som vi byggt under året. Här är ett urval.',
+      en: 'A mix of games, web shops and API experiments we built over the year. Here is a selection.',
     },
     featuredLabel: { sv: 'featured · ntig-helsingborg / github', en: 'featured · ntig-helsingborg / github' },
     openSlot: { sv: 'Din plats väntar', en: 'Your slot is waiting' },
