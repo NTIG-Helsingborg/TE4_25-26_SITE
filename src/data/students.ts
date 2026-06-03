@@ -1,3 +1,12 @@
+export interface AplStudentEntry {
+  /** Matches `id` in aplSwedenPlaces / aplMaltaPlaces */
+  placeId: string
+  /** Path under public/, e.g. '/photos/apl/carl-avitus.jpg' */
+  photo?: string
+  /** Student-written summary of what they did during APL */
+  summary: { sv: string; en: string }
+}
+
 export interface Student {
   id: string
   fullName: string
@@ -13,6 +22,8 @@ export interface Student {
   projects?: string[]
   personalProjects?: PersonalProject[]
   thesis?: { sv: string; en: string }
+  aplSweden?: AplStudentEntry
+  aplMalta?: AplStudentEntry
 }
 
 /**
@@ -184,6 +195,22 @@ export const students: Student[] = [
     thesis: {
       sv: 'En undersökning som utforskar hur AI-genererade videor kan avslöjas genom synliga artefakter och mjukvaruanalys, och jämför träffsäkerheten hos mänsklig bedömning mot fritt tillgängliga detektionsverktyg.',
       en: 'An investigation that explores how AI-generated videos can be detected through visible artifacts and software analysis, comparing the accuracy of human judgment against freely available detection tools',
+    },
+    aplSweden: {
+      placeId: 'avitus',
+      photo: '/photos/apl/LegalBuddy.jpg',
+      summary: {
+        sv: 'På Avitus arbetade jag med LegalBuddy-plattformen och byggde backend- och frontend-webbplatser för systemadministration.',
+        en: 'At Avitus I worked with the LegalBuddy platform and built backend and frontend websites for system administration.',
+      },
+    },
+    aplMalta: {
+      placeId: 'connecticlub-carl',
+      photo: '/photos/apl/CarlAPLMalta.jpg',
+      summary: {
+        sv: 'På Connecticlub fick jag i uppdrag att bygga en bokningswebbplats för deras fastigheter från grunden.',
+        en: 'At Connecticlub I was tasked with building a booking website for their properties from scratch.',
+      },
     },
   },
   {

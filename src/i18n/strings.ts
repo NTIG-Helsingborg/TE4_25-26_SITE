@@ -110,4 +110,8 @@ export const strings = {
     nextChapter: { sv: 'nästa kapitel', en: 'next chapter' },
     prevChapter: { sv: 'föregående kapitel', en: 'previous chapter' },
   },
+  profile: {
+    aplHeading: { sv: 'APL', en: 'Internship' },
+    contact: { sv: 'kontakt', en: 'contact' },
+  },
 } as const
