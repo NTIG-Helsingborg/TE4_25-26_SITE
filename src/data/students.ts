@@ -185,8 +185,8 @@ export const students: Student[] = [
       en: 'Some devs write clean code. I write clean prompts. No feature left up for interpretation. Six paragraphs, minimum.',
     },
     bio: {
-      sv: 'Ska skriva mer här...',
-      en: 'Going to write more here...',
+      sv: 'Jag är en fullstackutvecklare med erfarenhet av flera programmeringsspråk och tekniker. Jag har arbetat med HTML, CSS, JavaScript, TypeScript, Java, Luau, C#, C++, SQL, React, Vue, Laravel och Express. Jag tycker särskilt om att bygga stabila system, API:er och databaser som fungerar bra bakom kulisserna. I mina projekt har jag även använt Docker och PostgreSQL, vilket har gett mig en bättre förståelse för hur applikationer kan utvecklas, köras och hantera data på ett strukturerat sätt. Jag gillar också att bygga spel!',
+      en: 'I am a fullstack developer with experience in multiple programming languages and technologies. I have worked with HTML, CSS, JavaScript, TypeScript, Java, Luau, C#, C++, SQL, React, Vue, Laravel and Express. I particularly enjoy building stable systems, APIs and databases that work well behind the scenes. In my projects I have also used Docker and PostgreSQL, which has given me a better understanding of how applications can be developed, run and handle data in a structured way. I also enjoy building games!',
     },
     linkedin: 'carl-axelson',
     photo: '/photos/Carl.jpg',
@@ -392,6 +392,22 @@ export const students: Student[] = [
       en: "If it ain't broke don't fix it",
     },
     projects: ['roastbattles', 'ai-overwatch', 'verdenafall', 'webbshop'],
+    aplSweden: {
+      placeId: 'avitus',
+      photo: '/photos/img_1879.jpg',
+      summary: {
+        sv: 'På Avitus jobbade jag med LegalBuddy-plattformen och fick lära mig hur ett riktigt utvecklingsteam jobbar — från krav och kod till tester och deploy.',
+        en: 'At Avitus I worked on the LegalBuddy platform and got to see how a real development team operates — from requirements and code to testing and deployment.',
+      },
+    },
+    aplMalta: {
+      placeId: 'ascencia-damian',
+      photo: '/photos/img_4067.jpg',
+      summary: {
+        sv: 'På Ascencia Malta School fick jag jobba med webbutveckling i en internationell miljö och praktisera engelska på riktigt vid sidan om kodandet.',
+        en: 'At Ascencia Malta School I worked on web development in an international setting and got to use English for real alongside the coding.',
+      },
+    },
   },
   {
     id: 'finn',
@@ -453,6 +469,22 @@ export const students: Student[] = [
     thesis: {
       sv: '"Hur påverkas nyexaminerade utvecklare genom AI:s utveckling på arbetsmarknaden?"',
       en: '"How are newly graduated developers affected by the development of AI in the job market?"',
+    },
+     aplSweden: {
+      placeId: 'buildahome',
+      photo: '/photos/apl/APL_Sverige-IsakC.jpg',
+      summary: {
+        sv: 'Byggde riktiga hemsidor i wordpress till riktiga kunder',
+        en: 'Built real websites in WordPress for real clients.',
+      },
+    },
+    aplMalta: {
+      placeId: 'nm-pharma',
+      photo: '/photos/apl/APL_Malta-IsakC.jpg',
+      summary: {
+        sv: 'Byggde en webshop i WooCommerce från grunden, inklusive design, produktupplägg och betalningsintegration.',
+        en: 'Built a webshop in WooCommerce from scratch, including design, product setup, and payment integration.',
+      },
     },
   },
 ]
