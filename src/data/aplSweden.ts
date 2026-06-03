@@ -33,8 +33,12 @@ export const aplSwedenPlaces: AplPlace[] = [
   },
   {
     id: 'zynq',
-    company: { sv: 'Zynq — Mathias', en: 'Zynq — Mathias' },
+    company: { sv: 'ZYNQ Media Group', en: 'ZYNQ Media Group' },
+    subtitle: { sv: 'Handledare: Mathias Khemiri', en: 'Tutor: Mathias Khemiri' },
     students: 'Eliah',
+    website: 'https://www.zynq.se',
+    linkedIn: 'https://www.linkedin.com/company/zynq-media-group/',
+    email: 'mathias@zynq.se',
   },
   {
     id: 'toodoo',

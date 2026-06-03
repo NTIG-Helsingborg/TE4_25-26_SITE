@@ -55,7 +55,7 @@ export const aplMaltaPlaces: AplPlace[] = [
     contact: 'Ivan Padron',
     phone: '+356 7965 0244',
     email: 'abel@ascenciamalta.com',
-    website: 'https://www.ascencia-business-school.mt',
+    website: 'https://www.ascenciamalta.edu.mt/',
   },
   {
     id: 'staycare-finn',
