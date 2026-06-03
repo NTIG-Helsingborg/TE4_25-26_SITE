@@ -124,7 +124,7 @@ export const projects: Project[] = [
   {
     id: 'aiming-for-disaster',
     name: 'Aiming For Disaster',
-    org: 'KebabMumsare',
+    org: 'NTIG-Helsingborg',
     repo: 'Aiming-for-Disaster',
     url: 'https://github.com/KebabMumsare/Aiming-for-Disaster',
     tagline: {
@@ -143,7 +143,7 @@ export const projects: Project[] = [
   {
     id: 'ai-guard',
     name: 'AI Guard',
-    org: 'KebabMumsare',
+    org: 'NTIG-Helsingborg',
     repo: 'AI_Guard',
     url: 'https://github.com/KebabMumsare/AI_Guard',
     tagline: {
@@ -162,7 +162,7 @@ export const projects: Project[] = [
   {
     id: 'verdenafall',
     name: 'Verdenafall',
-    org: 'KevinHermansson',
+    org: 'NTIG-Helsingborg',
     repo: 'fuck-ass-rouglike',
     url: 'https://github.com/KevinHermansson/fuck-ass-rouglike',
     tagline: {
@@ -181,7 +181,7 @@ export const projects: Project[] = [
   {
     id: 'steamdream',
     name: 'Steamdream',
-    org: 'KebabMumsare',
+    org: 'NTIG-Helsingborg',
     repo: 'SteamDream',
     url: 'https://github.com/KebabMumsare/SteamDream',
     tagline: {
@@ -238,7 +238,7 @@ export const projects: Project[] = [
   {
     id: 'coffee-webshop',
     name: 'Coffee Webshop',
-    org: 'eliahdim',
+    org: 'NTIG-Helsingborg',
     repo: 'coffeeWebshop',
     url: 'https://github.com/eliahdim/coffeeWebshop',
     tagline: {
@@ -257,7 +257,7 @@ export const projects: Project[] = [
   {
     id: 'webbshop',
     name: 'Webbshop',
-    org: 'Mykyta-G',
+    org: 'NTIG-Helsingborg',
     repo: 'Webbshop',
     url: 'https://github.com/Mykyta-G/Webbshop',
     tagline: {
