@@ -438,5 +438,21 @@ export const students: Student[] = [
       sv: '"Hur påverkas nyexaminerade utvecklare genom AI:s utveckling på arbetsmarknaden?"',
       en: '"How are newly graduated developers affected by the development of AI in the job market?"',
     },
+     aplSweden: {
+      placeId: 'buildahome',
+      photo: '/photos/apl/APL_Sverige-IsakC.jpg',
+      summary: {
+        sv: 'Byggde riktiga hemsidor i wordpress till riktiga kunder',
+        en: 'Built real websites in WordPress for real clients.',
+      },
+    },
+    aplMalta: {
+      placeId: 'nm-pharma',
+      photo: '/photos/apl/APL_Malta-IsakC.jpg',
+      summary: {
+        sv: 'Byggde en webshop i WooCommerce från grunden, inklusive design, produktupplägg och betalningsintegration.',
+        en: 'Built a webshop in WooCommerce from scratch, including design, product setup, and payment integration.',
+      },
+    },
   },
 ]
