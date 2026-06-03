@@ -4,6 +4,7 @@ import { useLang } from '../contexts/lang'
 import { students } from '../data/students'
 import { projects } from '../data/projects'
 import { asset } from '../lib/asset'
+import { StudentAplSection } from '../components/StudentAplSection'
 
 const ease = [0.16, 1, 0.3, 1] as const
 
@@ -209,6 +210,9 @@ export function StudentProfile() {
           ))}
         </ul>
       </motion.section>
+
+      {/* APL */}
+      <StudentAplSection student={student} />
 
       {/* Projects — NTI-org group projects + personal/solo repos, one list */}
       {allProjects.length > 0 && (
