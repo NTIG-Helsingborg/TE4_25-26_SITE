@@ -320,10 +320,19 @@ export const students: Student[] = [
     id: 'kevin',
     fullName: 'Kevin Hermansson',
     shortName: 'Kevin',
-    role: { sv: 'AI · chatbot', en: 'AI · chatbot' },
-    stack: ['HTML', 'CSS', 'Python', 'AI'],
+    role: { sv: 'Backend', en: 'Backend' },
+    stack: ['HTML', 'CSS', 'JavaScript', 'postgreSQL', 'Docker', 'TypeScript', 'Java'],
+    bio: {
+      sv: 'Jag gillar att jobba med backend och designa system, samtidigt som jag bygger AI och chatbots som fungerar i praktiken. Under TE4 har jag jobbat med projekt som Verdenafall och Hypixel Skyblock Tracker och försökt hitta balansen mellan teknik, struktur och verkliga användarbehov.',
+      en: 'I enjoy working with backend and designing systems, while also building AI and chatbots that work in practice. During TE4 I have worked on projects like Verdenafall and Hypixel Skyblock Tracker and tried to find the balance between technology, structure and real user needs.',
+    },
+    quote: {
+      sv: 'När jag skrev denna koden så visste bara jag och gud hur den fungerar. Nu är det bara gud.',
+      en: 'When I wrote this code, only God and I understood how it worked. Now only God does.',
+    },
     github: 'KevinHermansson',
     photo: '/photos/portrait-01.jpg',
+    linkedin: 'kevin-hermansson-5476b937a',
     projects: ['verdenafall', 'hypixel-skyblock-tracker'],
   },
   {
