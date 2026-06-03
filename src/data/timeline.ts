@@ -31,6 +31,22 @@ export const timeline: TimelineEvent[] = [
     tag: 'intro',
   },
   {
+    id: 'sep-ai',
+    month: 'sep',
+    date: { sv: 'september 2025', en: 'September 2025' },
+    title: { sv: 'AI-projekt', en: 'AI project' },
+    brief: {
+      sv: 'Bygg AI-verktyg för att lösa riktiga problem.',
+      en: 'Build AI tools to solve real problems.',
+    },
+    description: {
+      sv: 'AI-verktyg för att lösa riktiga problem med riktiga kunder.',
+      en: 'AI tools to solve real problems with real customers.',
+    },
+    tag: 'project',
+    href: '/projekt/ai',
+  },
+  {
     id: 'aug-webshop',
     month: 'aug',
     date: { sv: 'augusti 2025', en: 'August 2025' },
@@ -103,8 +119,8 @@ export const timeline: TimelineEvent[] = [
       en: 'Build a web app that consumes an external API.',
     },
     description: {
-      sv: 'Klassens version av uppgiften: RoastBattles — React + Vite, graffitistilad UI, AI-genererade roasts.',
-      en: 'Our class take on the assignment: RoastBattles — React + Vite, graffiti-styled UI, AI-generated roasts.',
+      sv: 'Webbappar byggda runt ett externt API — hämta data, visa den snyggt och göra något användbart av den.',
+      en: 'Web apps built around an external API — fetch data, present it cleanly and make something useful out of it.',
     },
     tag: 'project',
     href: '/projekt/api',
