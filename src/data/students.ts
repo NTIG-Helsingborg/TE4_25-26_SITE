@@ -185,8 +185,8 @@ export const students: Student[] = [
       en: 'Some devs write clean code. I write clean prompts. No feature left up for interpretation. Six paragraphs, minimum.',
     },
     bio: {
-      sv: 'Ska skriva mer här...',
-      en: 'Going to write more here...',
+      sv: 'Jag är en fullstackutvecklare med erfarenhet av flera programmeringsspråk och tekniker. Jag har arbetat med HTML, CSS, JavaScript, TypeScript, Java, Luau, C#, C++, SQL, React, Vue, Laravel och Express. Jag tycker särskilt om att bygga stabila system, API:er och databaser som fungerar bra bakom kulisserna. I mina projekt har jag även använt Docker och PostgreSQL, vilket har gett mig en bättre förståelse för hur applikationer kan utvecklas, köras och hantera data på ett strukturerat sätt. Jag gillar också att bygga spel!',
+      en: 'I am a fullstack developer with experience in multiple programming languages and technologies. I have worked with HTML, CSS, JavaScript, TypeScript, Java, Luau, C#, C++, SQL, React, Vue, Laravel and Express. I particularly enjoy building stable systems, APIs and databases that work well behind the scenes. In my projects I have also used Docker and PostgreSQL, which has given me a better understanding of how applications can be developed, run and handle data in a structured way. I also enjoy building games!',
     },
     linkedin: 'carl-axelson',
     photo: '/photos/Carl.jpg',
@@ -271,6 +271,22 @@ export const students: Student[] = [
     thesis: {
       sv: '"En undersökning av hur strukturerade tekniker påverkar kvaliteten och precisionen i LLM-svar."',
       en: '"An investigation into how structured techniques affect the quality and precision of LLM responses."',
+    },
+    aplSweden: {
+      placeId: 'zynq',
+      photo: '/photos/apl/zynq-image.jpg',
+      summary: {
+        sv: 'På ZYNQ Media Group arbetade jag med AI-verktyg för marknadsföring och innehållsskapande.',
+        en: 'At ZYNQ Media Group I worked with AI tools for marketing and content creation.',
+      },
+    },
+    aplMalta: {
+      placeId: 'ascencia-eliah',
+      photo: '/photos/apl/malta-ascencia-image.jpg',
+      summary: {
+        sv: 'På Ascencia Malta School arbetade jag med att vidareutveckla deras webbplats samt att bygga en app liknande Schoolsoft.',
+        en: 'At Ascencia Malta School I worked with developing their website and building an app similar to Schoolsoft.',
+      },
     },
   },
   {
