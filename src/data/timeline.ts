@@ -88,8 +88,8 @@ export const timeline: TimelineEvent[] = [
       en: 'Guest visit from TE4 alumni Linnea.',
     },
     description: {
-      sv: 'Linnea berättade om sin karriär efter TE4 — på Biltema och tretton37.',
-      en: 'Linnea talked about her career after TE4 — at Biltema and tretton37.',
+      sv: 'Linnea berättade om sin karriär efter TE4 — på Biltema och 1337.',
+      en: 'Linnea talked about her career after TE4 — at Biltema and 1337.',
     },
     tag: 'event',
   },
