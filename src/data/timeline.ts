@@ -103,8 +103,8 @@ export const timeline: TimelineEvent[] = [
       en: 'Guest visit from AI company Klang.ai in Helsingborg.',
     },
     description: {
-      sv: 'Klang.ai berättade om hur de fångar, strukturerar och hittar signaler i samtal — europeisk AI byggd för integritet.',
-      en: 'Klang.ai talked about capturing, structuring and finding signals in conversations — European AI built for privacy.',
+      sv: 'På Klang.ai berättade Niklas om hur de fångar, strukturerar och hittar signaler i samtal — europeisk AI byggd för integritet.',
+      en: 'At Klang.ai, Niklas talked about capturing, structuring and finding signals in conversations — European AI built for privacy.',
     },
     tag: 'event',
     href: 'https://www.linkedin.com/company/klang-ai/',
@@ -151,8 +151,8 @@ export const timeline: TimelineEvent[] = [
       en: 'Develop a game with a unique mechanic as a twist.',
     },
     description: {
-      sv: 'Vår version: Back-To-Zero — Berserk-inspirerad 2D roguelike i Unity / C#. Ditt blod är din mana.',
-      en: 'Our take: Back-To-Zero — Berserk-inspired 2D roguelike in Unity / C#. Your blood is your mana.',
+      sv: 'Spel byggda från grunden — egna mekaniker, egen känsla och en hel del iterationer.',
+      en: 'Games built from scratch — custom mechanics, their own feel and plenty of iteration.',
     },
     tag: 'project',
     href: '/projekt/game',
@@ -183,8 +183,8 @@ export const timeline: TimelineEvent[] = [
       en: 'Locally host AI on a Jetson Nano that detects things via camera.',
     },
     description: {
-      sv: 'Vår version: AI-Overwatch — edge-AI på Jetson, OpenCV-kamerapipeline, dashboard i Vue.',
-      en: 'Our take: AI-Overwatch — edge AI on Jetson, OpenCV camera pipeline, Vue dashboard.',
+      sv: 'System som ser, resonerar och reagerar — från edge-AI på Jetson till övervakningsdashboards.',
+      en: 'Systems that see, reason and react — from edge AI on the Jetson to monitoring dashboards.',
     },
     tag: 'project',
     href: '/projekt/ai',
