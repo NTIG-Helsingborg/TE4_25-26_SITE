@@ -63,20 +63,20 @@ export const timeline: TimelineEvent[] = [
     href: '/projekt/webshop',
   },
   {
-    id: 'aug-crealevant',
+    id: 'aug-patricio-silva',
     month: 'aug',
     date: { sv: 'augusti 2025', en: 'August 2025' },
-    title: { sv: 'Crealevant', en: 'Crealevant' },
+    title: { sv: 'Patricio Silva', en: 'Patricio Silva' },
     brief: {
-      sv: 'Gästbesök från webbyrån Crealevant i Helsingborg.',
-      en: 'Guest visit from the Crealevant web agency in Helsingborg.',
+      sv: 'Gästbesök från Patricio Silva i Helsingborg.',
+      en: 'Guest visit from Patricio Silva in Helsingborg.',
     },
     description: {
-      sv: 'Crealevant delade erfarenheter från webbutveckling och e-handel med WordPress och Magento — över 20 år i branschen.',
-      en: 'Crealevant shared experiences from web development and e-commerce with WordPress and Magento — over 20 years in the industry.',
+      sv: 'Patricio delade erfarenheter e-handel — över 20 år i branschen.',
+      en: 'Patricio shared experiences from e-commerce — over 20 years in the industry.',
     },
     tag: 'event',
-    href: 'https://www.linkedin.com/company/crealevant-ab/',
+    href: 'https://www.linkedin.com/in/patriciosilvau/',
   },
   {
     id: 'sep-jscert',
