@@ -44,7 +44,7 @@ export const timeline: TimelineEvent[] = [
       en: 'AI tools to solve real problems with real customers.',
     },
     tag: 'project',
-    href: '/projekt/ai',
+    href: '',
   },
   {
     id: 'aug-webshop',
