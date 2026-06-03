@@ -191,9 +191,10 @@ export const students: Student[] = [
     fullName: 'Eliah Bäckström Dimmed',
     shortName: 'Eliah',
     role: { sv: 'Frontendutveckling', en: 'Frontend development' },
-    stack: ['HTML', 'CSS', 'React', 'Figma', 'JS', 'WordPress', 'C#'],
+    stack: ['HTML', 'CSS', 'React', 'JS', 'TS', 'AI', 'C#', 'SQL', 'Vue',],
     github: 'eliahdim',
     linkedin: 'eliah-dimmed',
+    isAuthor: true,
     photo: '/photos/portrait-07.jpg',
     bio: {
       sv: 'Jag har ett stort intresse för programmering, AI och digitala lösningar, särskilt projekt där teknik kan användas för att automatisera processer eller skapa något kreativt och användbart. Under året har jag arbetat mycket med moderna webbutvecklingsverktyg och AI-baserade lösningar, både i skolan och under min APL-period. \nPå min APL hos ZYNQ Media Group fokuserade jag bland annat på att utveckla AI-verktyg för marknadsföring och innehållsskapande. Där fick jag möjlighet att kombinera programmering med problemlösning, design och affärstänkande. Utöver utveckling är jag också intresserad av musik, digital design och kreativa projekt. Jag gillar att bygga idéer från grunden och utforska hur teknik och kreativitet kan kombineras för att skapa något unikt.',
@@ -386,6 +387,7 @@ export const students: Student[] = [
     stack: ['HTML', 'CSS', 'React', 'Figma', 'JS', 'WordPress', 'C#'],
     github: 'isakcarlsson25',
     linkedin: 'isak-carlsson-73076737a',
+    isAuthor: true,
     photo: '/photos/portrait-08.jpg',
     bio: {
       sv: 'Jag har gått TE4 med inriktning inom teknik och har ett stort intresse för webbutveckling. Under min utbildning och på fritiden har jag arbetat mycket med att utveckla webbapplikationer, där frontend är det område jag tycker är mest intressant. Jag gillar att skapa användarvänliga och moderna gränssnitt och utvecklas ständigt inom nya tekniker och ramverk. På fritiden gillar jag att kolla på fotboll och träna på gym, vilket hjälper mig att hålla både fokus och motivation uppe.',
