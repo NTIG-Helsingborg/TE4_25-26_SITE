@@ -272,6 +272,22 @@ export const students: Student[] = [
       sv: '"En undersökning av hur strukturerade tekniker påverkar kvaliteten och precisionen i LLM-svar."',
       en: '"An investigation into how structured techniques affect the quality and precision of LLM responses."',
     },
+    aplSweden: {
+      placeId: 'zynq',
+      photo: '/photos/apl/zynq-image.jpg',
+      summary: {
+        sv: 'På ZYNQ Media Group arbetade jag med AI-verktyg för marknadsföring och innehållsskapande.',
+        en: 'At ZYNQ Media Group I worked with AI tools for marketing and content creation.',
+      },
+    },
+    aplMalta: {
+      placeId: 'ascencia-eliah',
+      photo: '/photos/apl/malta-ascencia-image.jpg',
+      summary: {
+        sv: 'På Ascencia Malta School arbetade jag med att vidareutveckla deras webbplats samt att bygga en app liknande Schoolsoft.',
+        en: 'At Ascencia Malta School I worked with developing their website and building an app similar to Schoolsoft.',
+      },
+    },
   },
   {
     id: 'isak-p',
